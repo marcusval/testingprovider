@@ -35,10 +35,7 @@ namespace apitestingprovider.Controllers
                 return entities.Houses.FirstOrDefault(e => e.Id_H == ID);
             }
         }
-        public IEnumerable<House> GetHouseListForProvider(string providerID)
-        {
-     
-        }
+        //public IEnumerable<House> GetHouseListForProvider(string providerID){}
 
 
         public Service GetServiceForHouse(string passedHouse)
