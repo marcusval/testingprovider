@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CoyApp_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id_C" />
+          </Key>
+          <Property Name="Id_C" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="PhoneNum" Type="varchar" MaxLength="50" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="House">
+          <Key>
+            <PropertyRef Name="Id_H" />
+          </Key>
+          <Property Name="Id_H" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StreetNumber" Type="varchar" MaxLength="50" />
+          <Property Name="StreetName" Type="varchar" MaxLength="50" />
+          <Property Name="StreetSuffix" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Id_S" Type="varchar" MaxLength="50" />
+          <Property Name="Space" Type="varchar" MaxLength="50" />
+          <Property Name="Id_R" Type="varchar" MaxLength="50" />
+          <Property Name="Id_C" Type="varchar" MaxLength="50" />
+          <Property Name="Long" Type="varchar" MaxLength="50" />
+          <Property Name="Lat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NextServices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="DateRange" Type="varchar" MaxLength="50" />
+          <Property Name="ServiceDetails" Type="varchar(max)" Nullable="false" />
+          <Property Name="NotesToCustomer" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Notes">
+          <Key>
+            <PropertyRef Name="Id_N" />
+          </Key>
+          <Property Name="Id_N" Type="int" Nullable="false" />
+          <Property Name="FromProvider" Type="bit" Nullable="false" />
+          <Property Name="FromCustomer" Type="bit" Nullable="false" />
+          <Property Name="WrittenNote" Type="varchar(max)" />
+          <Property Name="Id_H" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ndate" Type="date" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="Id_P" />
+          </Key>
+          <Property Name="Id_P" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="CityTerritory" Type="varchar" MaxLength="50" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="PhoneNum" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="Id_R" />
+          </Key>
+          <Property Name="Id_R" Type="int" Nullable="false" />
+          <Property Name="DayOfWeek" Type="varchar" MaxLength="50" />
+          <Property Name="Id_P" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Id_S" />
+          </Key>
+          <Property Name="Id_S" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Frequency" Type="varchar" MaxLength="50" />
+          <Property Name="ServiceType" Type="varchar" MaxLength="50" />
+          <Property Name="WeekColor" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="CoyApp_dbModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="House" EntityType="Self.House" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NextServices" EntityType="Self.NextServices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notes" EntityType="Self.Notes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provider" EntityType="Self.Provider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Route" EntityType="Self.Route" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CoyApp_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id_C" />
+          </Key>
+          <Property Name="Id_C" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="House">
+          <Key>
+            <PropertyRef Name="Id_H" />
+          </Key>
+          <Property Name="Id_H" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StreetNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StreetName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StreetSuffix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_S" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Space" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_R" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_C" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NextService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="DateRange" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NotesToCustomer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Note">
+          <Key>
+            <PropertyRef Name="Id_N" />
+          </Key>
+          <Property Name="Id_N" Type="Int32" Nullable="false" />
+          <Property Name="FromProvider" Type="Boolean" Nullable="false" />
+          <Property Name="FromCustomer" Type="Boolean" Nullable="false" />
+          <Property Name="WrittenNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Id_H" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ndate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="Id_P" />
+          </Key>
+          <Property Name="Id_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CityTerritory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="Id_R" />
+          </Key>
+          <Property Name="Id_R" Type="Int32" Nullable="false" />
+          <Property Name="DayOfWeek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Id_S" />
+          </Key>
+          <Property Name="Id_S" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Frequency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WeekColor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CoyApp_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Houses" EntityType="Self.House" />
+          <EntitySet Name="NextServices" EntityType="Self.NextService" />
+          <EntitySet Name="Notes" EntityType="Self.Note" />
+          <EntitySet Name="Providers" EntityType="Self.Provider" />
+          <EntitySet Name="Routes" EntityType="Self.Route" />
+          <EntitySet Name="Services" EntityType="Self.Service" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CoyApp_dbModelStoreContainer" CdmEntityContainer="CoyApp_dbEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Id_C" ColumnName="Id_C" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Houses">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.House">
+              <MappingFragment StoreEntitySet="House">
+                <ScalarProperty Name="Id_H" ColumnName="Id_H" />
+                <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="StreetSuffix" ColumnName="StreetSuffix" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Id_S" ColumnName="Id_S" />
+                <ScalarProperty Name="Space" ColumnName="Space" />
+                <ScalarProperty Name="Id_R" ColumnName="Id_R" />
+                <ScalarProperty Name="Id_C" ColumnName="Id_C" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NextServices">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.NextService">
+              <MappingFragment StoreEntitySet="NextServices">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DateRange" ColumnName="DateRange" />
+                <ScalarProperty Name="ServiceDetails" ColumnName="ServiceDetails" />
+                <ScalarProperty Name="NotesToCustomer" ColumnName="NotesToCustomer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notes">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.Note">
+              <MappingFragment StoreEntitySet="Notes">
+                <ScalarProperty Name="Id_N" ColumnName="Id_N" />
+                <ScalarProperty Name="FromProvider" ColumnName="FromProvider" />
+                <ScalarProperty Name="FromCustomer" ColumnName="FromCustomer" />
+                <ScalarProperty Name="WrittenNote" ColumnName="WrittenNote" />
+                <ScalarProperty Name="Id_H" ColumnName="Id_H" />
+                <ScalarProperty Name="Ndate" ColumnName="Ndate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Providers">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.Provider">
+              <MappingFragment StoreEntitySet="Provider">
+                <ScalarProperty Name="Id_P" ColumnName="Id_P" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CityTerritory" ColumnName="CityTerritory" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Routes">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.Route">
+              <MappingFragment StoreEntitySet="Route">
+                <ScalarProperty Name="Id_R" ColumnName="Id_R" />
+                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="Id_P" ColumnName="Id_P" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="CoyApp_dbModel.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="Id_S" ColumnName="Id_S" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="WeekColor" ColumnName="WeekColor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
