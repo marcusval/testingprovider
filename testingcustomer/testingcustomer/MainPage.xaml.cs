@@ -17,5 +17,15 @@ namespace testingcustomer
         {
             InitializeComponent();
         }
+
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CustomerMain());
+        }
+
+        async void SecondButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new MapPage());
+        }
     }
 }

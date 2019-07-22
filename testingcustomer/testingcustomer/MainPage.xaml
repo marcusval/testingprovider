@@ -8,9 +8,28 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="My First Customer Application!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" 
+           Font="Large"
+        />
+
+        <DatePicker Format="D"
+            VerticalOptions="CenterAndExpand" />
+
+        <Button Text= "Next Page"
+          HorizontalOptions= "Center"
+          VerticalOptions= "CenterAndExpand"
+          Clicked= "OnButtonClicked"
+        />
+        <Button Text= "Next Page"
+          HorizontalOptions= "Center"
+          VerticalOptions= "CenterAndExpand"
+          Clicked= "SecondButtonClicked"
+        />
+        
     </StackLayout>
+    
+    
 
 </ContentPage>
