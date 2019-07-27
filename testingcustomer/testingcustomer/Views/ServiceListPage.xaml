@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testingcustomer.Views.ServiceListPage"
+             xmlns:ViewModels="clr-namespace:testingcustomer.ViewModels;assembly=testingcustomer">
+    <ContentPage.BindingContext>
+        <ViewModels:NextServiceViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20" BackgroundColor="White" >
+            <Label 
+                Text="Maintenance Schedule"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="DarkOliveGreen"
+            />
+            <ListView ItemsSource="{Binding NextServiceList}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5,35">
+                                <Label Text="{Binding ServiceDetails, StringFormat='-Description: {0:F}'}"
+                                       FontSize="Medium"
+                                       TextColor="Black"
+                                />
+
+                                <Label  Text="{Binding DateRange, StringFormat='-Expect service between: {0:F}'}"
+                                        FontSize="Medium" 
+                                        TextColor="Black"
+                                />
+                                
+                                <Label Text="{Binding NotesToCustomer, StringFormat='-Special request: {0:F}'}" 
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
+                                       TextColor="DarkOliveGreen"
+                                 />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

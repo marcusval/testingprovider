@@ -17,17 +17,26 @@
         <DatePicker Format="D"
             VerticalOptions="CenterAndExpand" />
 
-        <Button Text= "Next Page"
+        <Button Text= "Service List Page"
           HorizontalOptions= "Center"
           VerticalOptions= "CenterAndExpand"
           Clicked= "OnButtonClicked"
         />
-        <Button Text= "Next Page"
+        <Button Text= "Map Page"
           HorizontalOptions= "Center"
           VerticalOptions= "CenterAndExpand"
           Clicked= "SecondButtonClicked"
         />
-        
+        <Button Text= "3rd Page"
+          HorizontalOptions= "Center"
+          VerticalOptions= "CenterAndExpand"
+          Clicked= "ThirdButtonClicked"
+        />
+        <Button Text= "Property List Page"
+                HorizontalOptions= "Center"
+                VerticalOptions= "CenterAndExpand"
+                Clicked= "FourthButtonClicked"
+        />
     </StackLayout>
     
     

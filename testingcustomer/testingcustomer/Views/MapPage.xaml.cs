@@ -15,12 +15,13 @@ namespace testingcustomer
         public MapPage()
         {
             InitializeComponent();
+            _ = NavigateToBuilding25(); 
         }
 
         public async Task NavigateToBuilding25()
         {
-            var location = new Location(47.645160, -122.1306032);
-            var options = new MapLaunchOptions { Name = "Microsoft Building 25" };
+            Location location = new Location(47.645160, -122.1306032);
+            MapLaunchOptions options = new MapLaunchOptions { Name = "Microsoft Building 25" };
 
             await Map.OpenAsync(location, options);
         }

@@ -7,7 +7,7 @@
              x:Class="testingcustomer.MapPage">
     <ContentPage.Content>
         <StackLayout>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

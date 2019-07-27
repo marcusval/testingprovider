@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using testingcustomer.Views; 
 
 namespace testingcustomer
 {
@@ -20,12 +21,21 @@ namespace testingcustomer
 
         async void OnButtonClicked(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new CustomerMain());
+            await Navigation.PushAsync(new ServiceListPage());
         }
 
         async void SecondButtonClicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new MapPage());
+        }
+        async void ThirdButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CustomerMain());
+        }
+
+        async void FourthButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CustomerPropertyList());
         }
     }
 }
