@@ -27,5 +27,9 @@ namespace testingcustomer
         {
             // Handle when your app resumes
         }
+
+        
+        public static string _currentHouseID { get; set; }
+        public static string _currentCustomerID = "133"; 
     }
 }

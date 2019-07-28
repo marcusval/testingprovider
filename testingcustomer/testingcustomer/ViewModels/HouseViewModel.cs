@@ -8,37 +8,38 @@ using testingcustomer.Annotations;
 using testingcustomer.Models;
 using testingcustomer.Services;
 using Newtonsoft.Json;
-using Refit; 
+using Refit;
+
 
 namespace testingcustomer.ViewModels
 {
-    public class NextServiceViewModel : INotifyPropertyChanged
-
+    public class HouseViewModel : INotifyPropertyChanged
     {
-        private List<NextService> _nextServiceList;
+        private string currentCustomer = App._currentCustomerID; 
+        private List<House> _customerHouseList;
 
-        public List<NextService> NextServiceList
+        public List<House> CustomerHouseList
         {
-            get{return _nextServiceList;}
+            get {return _customerHouseList;}
             set
             {
-                _nextServiceList = value; 
+                _customerHouseList = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
-        public NextServiceViewModel()
+        public HouseViewModel()
         {
             InitializeDataAsync();
         }
 
-        private async Task<List<NextService>> InitializeDataAsync()
+        private async Task<List<House>> InitializeDataAsync()
         {
-            var serviceServices = new NextServiceServices();
-            NextServiceList = await serviceServices.GetListOfNextServices();
-            NextServiceList.Reverse();
-            return NextServiceList; 
+            var houseService = new HouseServices();
+            CustomerHouseList = await houseService.GetHouseListForCustomer(currentCustomer);
+            return CustomerHouseList; 
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

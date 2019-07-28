@@ -16,5 +16,12 @@ namespace testingcustomer.Views
         {
             InitializeComponent();
         }
+
+        async void ViewPropertyDetails(object sender, EventArgs args)
+        {
+            var myVar = sender as Button;
+            App._currentHouseID = myVar.ClassId;
+            await Navigation.PushAsync(new SinglePropertyPage());
+        }
     }
 }

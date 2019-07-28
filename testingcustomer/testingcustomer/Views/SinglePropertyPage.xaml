@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="testingcustomer.Views.SinglePropertyPage"
+             xmlns:ViewModels="clr-namespace:testingcustomer.ViewModels;assembly=testingcustomer">
+    
+    <ContentPage.BindingContext>
+        <ViewModels:SingleHouseViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout Margin="20" BackgroundColor="White" >
+            <Label 
+                Text="Property Details"
+                HorizontalTextAlignment="Center"
+                FontSize="31"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="DarkOliveGreen"
+            />
+
+            <StackLayout Orientation="Horizontal" Padding="5, 42, 5, 5">
+                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 16">
+                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="Large" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <Label 
+                Text="{Binding CurrentHouseService.Frequency, StringFormat='Service Frequency: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Black"
+            />
+            <Label 
+                Text="{Binding CurrentHouseService.ServiceType, StringFormat='Service Type: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Black"
+            />
+
+
+
+
+
+            <ListView ItemsSource="{Binding CurrentHouse}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5,35">
+
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding CurrentHouse.StreetNumber}" TextColor="Black" FontSize="Medium" />
+                                    <Label Text="{Binding StreetName}" TextColor="Black" FontSize="Medium" />
+                                    <Label Text="{Binding StreetSuffix}" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding City}" FontAttributes="Bold" TextColor="DarkOliveGreen" FontSize="Medium" />
+                                    <Label Text="{Binding State, StringFormat=', {0:F}'}" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+
+                                <Button Text= "AddComment"
+                                />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
