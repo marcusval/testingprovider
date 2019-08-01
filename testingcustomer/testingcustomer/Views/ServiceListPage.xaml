@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Upcoming Services"
              x:Class="testingcustomer.Views.ServiceListPage"
              xmlns:ViewModels="clr-namespace:testingcustomer.ViewModels;assembly=testingcustomer">
     <ContentPage.BindingContext>

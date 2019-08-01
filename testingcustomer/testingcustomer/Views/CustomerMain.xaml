@@ -4,25 +4,182 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Terms of Service"
              x:Class="testingcustomer.CustomerMain">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-            <ListView>
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>mono</x:String>
-                        <x:String>monodroid</x:String>
-                        <x:String>monotouch</x:String>
-                        <x:String>monorail</x:String>
-                        <x:String>monodevelop</x:String>
-                        <x:String>monotone</x:String>
-                        <x:String>monopoly</x:String>
-                        <x:String>monomodal</x:String>
-                        <x:String>mononucleosis</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
-            </ListView>
 
+            <Label HorizontalTextAlignment="Center" Margin="10"  FontSize="Medium" TextColor="Black">Coy Land Techs Terms and Conditions</Label>
+
+            <ScrollView>
+
+            <Label Margin="10" FontSize="Small" TextColor="Black">
+                
+The Legal Side
+We like to thank you for trusting Coy Land Techs and please do not let the legal stuff scare you. Coy Land
+Techs has no known history of unhappy clients and has never had resort to legal action with a client.
+This agreement is between you and Coy Land Techs, which may be referred to as “CLT”, “CLT LLC”, “We”, “Us”,
+and “Our”. If you are in question or unsure about the meaning of any of these terms, it is your responsibility to
+contact us at support@coylandtechs.com
+
+1. Contact Information
+Phone- (951) 394-0848 • Email- support@coylandtechs.com
+
+2. Terms of sale
+Customer is responsible for reading this document and must agree to all terms before sale/service is final.
+Submitting or accepting any service/product/consultation/appointment request, declares you as the customer
+have read and agree to all of Coy Land Techs terms and conditions. • All clerical errors are subject to
+correction. • Any defect in service/product damage must be reported within 24 hours of receiving
+service/product to be considered defective. • No repairs, exchanges, returns or credit will be honored unless
+approved by Coy Land Techs upper management staff. • Coy Land Techs may cancel an
+appointment/order/service at any time. • All refunds will be refunded from our main office and require a
+reasonable allowed processing time. • Customer is responsible for all payments described. Any delay in
+payment will have additional interest of 35% APR and is calculated daily. • By accepting this contract client
+understands all legal cost and recovery fees will be billed to client and are subject to the same 20% interest
+charge. • Client understands that in case of dispute or partial payment, Coy Land Techs will place a lien on the
+property and will proceed with maximum legal action which will be billed to the client as described.
+
+3. Claims and Return Policy
+Coy Land Techs stands behind our appointment/order/service 100% as long as the following procedures are
+followed. Any situation determined to be a lack of care for the order/service will void all guarantees and
+warranties. • All claims will be inspected by a Coy Land Techs staff member. If no staff is available than
+customer must provide clear digital images of the defect. Clarity of all images will be judged by Coy Land
+Techs.
+LEGAL
+Images that Coy Land Techs determines are not clear enough to prove damage will not be accepted as valid
+proof. All images must be emailed within the 24 hour window to be considered valid, no exceptions. •
+Appointments may be cancelled in writing within 24 hours of original acceptance date and time; as long as
+product has not been delivered to the customer and the service has not started. • Contract may only be
+cancelled after 24 hours with approval from Coy Land Techs. No special order plants/products can be
+canceled after 24 hours or after the order has been processed for any reason. • If approved, all cancelation
+will be subjected to a 20% cancelation fee for service not yet provide, Customer will be 100% responsible for
+payment off all services rendered, products, and supporting cost to include landscaping materials, equipment
+rental, and labor cost. • Coy Land Techs staff will determine the best resolution to all claims. This may include
+replacing, repairing products and/or repeating service. • Coy Land Techs will have ultimate decision on any
+claim. No claim will be considered valid if claim involves customer preference change. • Product/service
+cannot be canceled/returned due to customer “accidently” choosing the wrong options. No return, refund, or
+exchange will be made based off any related mistake.
+
+4. Delivery Policy
+Coy Land Techs does the best job we can to ensure your service/product makes it to your home on time and
+in good condition. • Customer is responsible to clear any delivery site for proper movement of vehicles,
+equipment and products. No Coy Land Techs staff will be authorized to handle any items unless it is listed on
+the contract. • Any damage to customers home due to lack of preparation of the work site falls solely on the
+client. This includes all preventable damage to service/product as well. • Customer is responsible for
+measuring any gateways or path of delivery to ensure proper fitment of material/merchandise. No returns or
+credits will be granted due to equipment, product, or CLT staff not being able to “fit” into a pathway. • Any
+defects must be claimed at time of delivery. All claims involving defects after final inspection will be
+considered lack of proper care from the client, and will not be granted any kind of credit, return, or refund. •
+Service/product will not be rendered/delivered unless person receiving is over 18 years of age. • If Coy Land
+Techs staff determines the site of delivery is too risky and determines proceeding may cause damage to
+client’s property or products being delivered, CLT staff will inform the customer. At which point the customer
+can decide to waive Coy Land Techs of all possible damage that could occur during delivery/service rendered.
+If the customer does not wish to waive Coy Land Techs the merchandise will be left in a spot designated by
+the driver. • If client is not present at service/delivery site within 15 minutes of crew’s arrival and no other
+arrangement has been made, customer is responsible to pay all missed labor cost. • Under no circumstance
+will Coy Land Techs be responsible for cracked cement unless
+LEGAL
+Coy Land Techs has deliberately caused the cracking. • Cracking due to grounds inability to handle normal
+work traffic is the responsibility of client.
+TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, CLT AND ITS AFFILIATES DISCLAIM
+ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT.
+LIMITATION OF LIABILITY
+UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL OR EQUITABLE THEORY, WHETHER IN TORT, CONTRACT,
+STRICT LIABILITY OR OTHERWISE, SHALL COY LAND TECHS OR ANY OF ITS VENDORS OR SUPPLIERS BE LIABLE
+TO YOU OR TO ANY OTHER PERSON FOR ANY INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL LOSSES
+OR DAMAGES OF ANY NATURE ARISING OUT OF OR IN CONNECTION WITH THE USE OF PRODUCTS OR
+SERVICES RENDERED. CLT IS NOT RESPONSIBLE FOR ANY HEALTH OR NON HEALTH RELATED ISSUES ARISING
+FROM THE USE OF PRODUCTS SOLD, DONATED, OR RECEIVED FROM CLT. IF CLT IS FOUND TO BE LIABLE TO
+YOU FOR ANY DAMAGE OR LOSS WHICH IS IN ANY WAY CONNECTED WITH YOUR USE WITH CLT
+PRODUCT/SERVICE, CLT’S LIABILITY SHALL NOT EXCEED US $50.00. CLT IS NOT LIABLE FOR PRODUCT SPECS
+AND DOES NOT GUARANTEE ACCURACY OF THIRD PARTY VENDORS. WE ARE NOT LIABLE/ACCOUNTABLE FOR
+ANY INJURIES RESULTING FROM THE USE OF THE PRODUCTS OFFERED BY CLT. CLIENTS OF CLT SITE AND
+OTHERS RELATED TO THE CLIENT IN ANY FORM ACCEPT THE SERVICE AT THEIR OWN RISK
+IN CASE A BREACH
+You will not hold CLT responsible for your choice to breach these terms. We will not be held financially liable
+for any breach and are not required to reimburse you for any cost you incur attempting fight the terms of this
+agreement. You acknowledge and agree that your violation of the terms and conditions of these Terms of Use
+through unauthorized use of or access to the Site will result in a minimum of ten-thousand dollars
+($10,000.00) in damages awarded to CLT.
+DISPUTE RESOLUTIOND (LEGAL PROBLEMS)
+IN THE UNLIKELY EVENT THERE IS A LEGAL PROBLEM BETWEEN YOU AND CLT, THIS SECTION PROVIDES FOR
+THE RESOLUTION OF MOST DISPUTES OR CLAIMS THROUGH ARBITRATION INSTEAD OF COURT TRIALS AND
+CLASS ACTIONS. YOU SHOULD READ THIS SECTION CAREFULLY; ARBITRATION IS FINAL, BINDING AND
+SUBJECT TO ONLY VERY LIMITED REVIEW BY A COURT. THIS SECTION GOVERNING DISPUTES WILL SURVIVE
+ANY TERMINATION OF THIS AGREEMENT.
+LEGAL
+MANDATORY ARBITRATION
+YOU AND CLT AGREE TO ARBITRATE ANY CLAIM, CONTROVERSY OR DISPUTE ARISING UNDER OR RELATED TO
+THIS AGREEMENT, EXCEPT THAT YOU OR CLT MAY BRING AN INDIVIDUAL ACTION IN SMALL CLAIMS COURT.
+YOU AND CLT ACKNOWLEDGE THAT THIS AGREEMENT EVIDENCES A TRANSACTION IN INTERSTATE
+COMMERCE AND THAT THE FEDERAL ARBITRATION ACT WILL GOVERN THE INTERPRETATION AND
+ENFORCEMENT OF THIS ARBITRATION PROVISION. TO INITIATE ARBITRATION, YOU OR CLT MUST FIRST SEND
+A WRITTEN NOTICE, VIA CERTIFIED MAIL, TO THE OTHER PARTY INDICATING AN INTENT TO ARBITRATE,
+WHICH NOTICE WILL INCLUDE:
+(1) A DESCRIPTION OF THE FACTS;
+(2) A DESCRIPTION OF THE NATURE OF THE CLAIM; AND
+(3) THE RELIEF SOUGHT (“NOTICE TO ARBITRATE”).
+SEND NOTICE TO ARBITRATE TO: COY HOME, LLC. 12625 FREDERICK ST. STE I-5 PMB #324, MORENO VALLEY,
+CA, 92553. BOTH PARTIES AGREE TO MAKE REASONABLE ATTEMPTS TO RESOLVE ANY SUCH DISPUTE;
+HOWEVER, IF THE PARTIES CANNOT RESOLVE THE DISPUTE WITHIN FORTY-FIVE (45) DAYS OF RECEIPT OF
+NOTICE TO ARBITRATE, THEN AN ARBITRATION CLAIM MAY COMMENCE. ANY ARBITRATION INITIATED UNDER
+THIS AGREEMENT WILL BE ADMINISTERED BY THE AMERICAN ARBITRATION ASSOCIATION (“AAA”) IN
+ACCORDANCE WITH ITS ARBITRATION RULES (AND THE AAA SUPPLEMENTAL PROCEDURES FOR CONSUMER
+RELATED DISPUTES AS THEY MAY BE APPLICABLE), AS MODIFIED BY THIS AGREEMENT. INFORMATION
+CONCERNING THE AAA, ITS ARBITRATION RULES AND OTHER INFORMATION CONCERNING ARBITRATION
+PROCEDURES AND FEES CAN BE FOUND BY CALLING THE AAA AT 1-800-778-7879 OR VISITING ITS WEBSITE AT
+http://www.adr.org.
+ANY ARBITRATION WILL BE CONDUCTED BY A SINGLE NEUTRAL ARBITRATOR. YOU AND CLT WILL COOPERATE
+IN GOOD FAITH TO SELECT THE ARBITRATOR WITHIN THIRTY (30) CALENDAR DAYS OF THE COMMENCEMENT
+OF ANY ARBITRATION PROCEEDING. IF YOU AND CLT CANNOT AGREE UPON A NEUTRAL ARBITRATOR WITHIN
+THE THIRTY DAY PERIOD, THEN EITHER PARTY MAY REQUEST THAT THE AAA APPOINT, IN ITS SOLE
+DISCRETION, A NEUTRAL ARBITRATOR. YOU AND CLT FURTHER AGREE THAT NO ARBITRATOR WILL HAVE THE
+AUTHORITY TO AWARD ANY RELIEF OR REMEDY IN EXCESS OF OR CONTRARY TO WHAT IS PROVIDED IN THIS
+AGREEMENT, EXCEPT WHERE SUCH PROVISION IS NOT PERMITTED UNDER APPLICABLE LAW. THE
+ARBITRATOR´S DECISION AND AWARD WILL BE FINAL AND BINDING, AND JUDGMENT ON THE AWARD
+RENDERED BY THE ARBITRATOR MAY BE ENTERED INTO IN ANY COURT HAVING JURISDICTION. THE LAW THAT
+IS APPLIED TO THIS AGREEMENT ALSO WILL BE APPLIED IN ANY ARBITRATION PROCEEDING. UNLESS YOU
+AND CLT OTHERWISE AGREE, ANY ARBITRATION WILL BE CONDUCTED IN RIVERSIDE, CALIFORNIA. ALL
+ADMINISTRATIVE COSTS AND FEES OF THE ARBITRATION WILL BE BORNE EQUALLY BY YOU AND CLT.
+LEGAL
+YOU AND CLT WILL EACH BEAR THE EXPENSES OF ITS OWN COUNSEL, EXPERTS, WITNESSES AND THE
+PREPARATION AND PRESENTATION OF EVIDENCE IN CONNECTION WITH ANY ARBITRATION.
+WE EACH AGREE THAT ANY DISPUTE RESOLUTION PROCEEDINGS WILL BE CONDUCTED ONLY ON AN
+INDIVIDUAL BASIS AND NOT IN A CLASS, CONSOLIDATED OR REPRESENTATIVE ACTION. WE EACH HEREBY
+WAIVE OUR RIGHT TO PARTICIPATE IN ANY CLASS ACTION, WHETHER IN COURT OR ARBITRATION. IF FOR ANY
+REASON A CLAIM PROCEEDS IN COURT RATHER THAN IN ARBITRATION WE EACH WAIVE ANY RIGHT TO A JURY
+TRIAL.
+IF WE MADE A MISTAKE
+If any of the terms in this agreement are to be deemed invalid, or for any reason unenforceable, that term will
+be considered isolated and shall not affect the validity and enforceability of any remaining terms.
+
+5) GENERAL
+Safety: Coy Land Techs take all necessary steps to ensure a safe worksite. If the clients’ property is deemed
+unsafe for any reason, Coy Land Techs staff will not complete the unsafe work. Client agrees to keep all
+animals, children, guest away from work site at all times. Work will not be completed for any reason if
+unauthorized persons or animals are present at the worksite. Client will be responsible for all lost labor,
+rentals, and fees during the uncompliant timeframes. Clients grants Coy Land Techs full access to the work
+site during normal working hours. Any time lost due to no access will be billed to the client for all associated
+cost.
+Planting: Coy Land Techs is not responsible for any damage created by the growth of any plants. Damage may
+include but is not limited to the growth of plant and tree roots. Coy Land Techs is not responsible for damage
+caused by any chemicals used by CLT staff. If client request particular chemicals not be used, client is
+responsible for providing an alternative option. The effectiveness of service from alternate chemicals is not
+guaranteed for any reason.
+Warranties: Product/Service will not come with a warranty from Coy Land Techs in any manner. We are not
+responsible for upholding the warranties, promises, or claims made by manufactures/suppliers or any other
+third parties.
+Entire Agreement: These Terms of Use constitute the entire Agreement between you and CLT with respect to
+the subject matter hereof and governs your acceptance of service, superseding any prior agreements
+between you and CLT. You also may be subject to additional terms and conditions that may apply when you
+use affiliate services. CLT’s failure to exercise or enforce any right or provision of this Agreement shall not
+constitute a waiver of such right or provision. Choice of Law and Forum: Client agrees by allowing CLT staff to
+start work, the client has accepted terms of the contract either verbally or in writing. Verbal agreement does
+not require clients signature. The venue for any disputes arising from the use of this Site shall be Riverside,
+California. TERMINATION CLT may terminate this Agreement with or without cause, with or without notice.
+            </Label>
+        </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

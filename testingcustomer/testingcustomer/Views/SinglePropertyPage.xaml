@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Property Details"
              x:Class="testingcustomer.Views.SinglePropertyPage"
              xmlns:ViewModels="clr-namespace:testingcustomer.ViewModels;assembly=testingcustomer">
     
@@ -13,69 +14,86 @@
 
 
     <ContentPage.Content>
-        <StackLayout Margin="20" BackgroundColor="White" >
+        <StackLayout Margin="20,20,20,5" BackgroundColor="#ffffff" >
             <Label 
                 Text="Property Details"
                 HorizontalTextAlignment="Center"
                 FontSize="31"
                 FontAttributes="Bold"
                 TextDecorations="Underline"
-                TextColor="DarkOliveGreen"
+                TextColor="#697775"
             />
 
-            <StackLayout Orientation="Horizontal" Padding="5, 42, 5, 5">
-                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="25" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal" Padding="5, 30, 5, 5">
+                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 16">
-                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
             </StackLayout>
 
             <Label 
                 Text="{Binding CurrentHouseService.Frequency, StringFormat='Service Frequency: {0:F}'}"
                 FontSize="Large"
                 FontAttributes="Bold"
-                TextColor="Black"
+                TextColor="#8e7768"
             />
             <Label 
                 Text="{Binding CurrentHouseService.ServiceType, StringFormat='Service Type: {0:F}'}"
                 FontSize="Large"
                 FontAttributes="Bold"
-                TextColor="Black"
+                TextColor="#8e7768"
             />
 
+            <Button Text= "Add Note"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "AddNotePage"
+                    CornerRadius="11"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+                    Margin="5, 25, 5, 2"
+            />
 
+            <Label Margin="0,10,0,0"
+                Text="Property Notes"
+                HorizontalTextAlignment="Center"
+                FontSize="31"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="#8e7768"
+            />
 
-
-
-            <ListView ItemsSource="{Binding CurrentHouse}" HasUnevenRows="True" >
+            <ListView ItemsSource="{Binding CurrentHouseNotes}" HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Vertical" Padding="5,35">
-
-
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding CurrentHouse.StreetNumber}" TextColor="Black" FontSize="Medium" />
-                                    <Label Text="{Binding StreetName}" TextColor="Black" FontSize="Medium" />
-                                    <Label Text="{Binding StreetSuffix}" TextColor="Black" FontSize="Medium" />
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding City}" FontAttributes="Bold" TextColor="DarkOliveGreen" FontSize="Medium" />
-                                    <Label Text="{Binding State, StringFormat=', {0:F}'}" TextColor="Black" FontSize="Medium" />
-                                </StackLayout>
-
-                                <Button Text= "AddComment"
+                            <StackLayout Orientation="Vertical" Margin="0, 20" Padding="2,2,2,10">
+                                <Label
+                                    Text="{Binding Ndate, StringFormat='Date Written: {0:d}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#8e7768" FontSize="20" FontAttributes="Bold"
                                 />
-
+                                <Label
+                                    Text="{Binding FromProvider, StringFormat='From Provider: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#697775" FontSize="20" FontAttributes="Bold"
+                                />
+                               
+                                <Label
+                                    Text="{Binding WrittenNote, StringFormat='Message: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#697775" FontSize="20" FontAttributes="Bold"
+                                 />
+                                
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
             </ListView>
         </StackLayout>
     </ContentPage.Content>

@@ -21,5 +21,20 @@ namespace testingcustomer.Services
 
         [Get("/service?passedHouse={passedHouse}")]
         Task<Service> GetServiceForHouse(string passedHouse);
+
+        [Get("/Notes?houseID={houseId}")]
+        Task<List<Note>> GetNotesForHouse(string houseId);
+
+        [Get("/Notes")]
+        Task<List<Note>> GetAllNotes();
+
+        [Post("/Notes")]
+        Task<Note> PostNotesToHouse(Note newNotes);
+
+        [Post("/Notes")]
+        Task<Note> PostNotesUpdate(Note notes); 
+
+
+
     }
 }

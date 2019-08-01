@@ -28,5 +28,14 @@ namespace apitestingprovider.Controllers
 
             }
         }
+
+        public void PostNotesUpdate([FromBody] Note notes)
+        {
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
+            {
+                entities.Notes.Add(notes);
+                entities.SaveChanges();
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:testingcustomer.ViewModels;assembly=testingcustomer"
              mc:Ignorable="d"
+             Title="Property List"
              x:Class="testingcustomer.Views.CustomerPropertyList">
     
     <ContentPage.BindingContext>
@@ -50,7 +51,7 @@
                                         TextColor="White"
                                         FontSize="Medium"
                                         FontAttributes="Bold"
-                                        BackgroundColor="DarkGray"
+                                        BackgroundColor="#697775"
 
                                 />
 

@@ -34,5 +34,10 @@ namespace testingcustomer.Services
         {
             return await _customerAPI.GetServiceForHouse(passedHouse); 
         }
+
+        public async Task<List<Note>> GetNotesForHouse(string houseId)
+        {
+            return await _customerAPI.GetNotesForHouse(houseId); 
+        }
     }
 }

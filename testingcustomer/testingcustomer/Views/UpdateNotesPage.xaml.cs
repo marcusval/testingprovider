@@ -9,19 +9,18 @@ using Xamarin.Forms.Xaml;
 
 namespace testingcustomer.Views
 {
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SinglePropertyPage : ContentPage
+    public partial class UpdateNotesPage : ContentPage
     {
-
-        public SinglePropertyPage()
+        public UpdateNotesPage()
         {
             InitializeComponent();
         }
 
-        async void AddNotePage(object sender, EventArgs args)
+         async void Button_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UpdateNotesPage());
+            await DisplayAlert("Success", "Keep the feedback coming, we work for you!", "Ok");
+            await Navigation.PopToRootAsync(); 
         }
     }
 }

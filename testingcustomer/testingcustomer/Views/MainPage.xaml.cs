@@ -24,10 +24,6 @@ namespace testingcustomer
             await Navigation.PushAsync(new ServiceListPage());
         }
 
-        async void SecondButtonClicked(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new MapPage());
-        }
         async void ThirdButtonClicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new CustomerMain());

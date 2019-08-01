@@ -6,37 +6,55 @@
              mc:Ignorable="d"
              x:Class="testingcustomer.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="LightGray" Padding="8">
         <!-- Place new controls here -->
-        <Label Text="My First Customer Application!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" 
-           Font="Large"
-        />
 
-        <DatePicker Format="D"
-            VerticalOptions="CenterAndExpand" />
 
-        <Button Text= "Service List Page"
-          HorizontalOptions= "Center"
-          VerticalOptions= "CenterAndExpand"
-          Clicked= "OnButtonClicked"
+        <Label Margin="10,30,10,10"
+               Text="Coy Land Techs"
+               HorizontalTextAlignment="Center"
+               FontSize="31"
+               FontAttributes="Bold"
+               TextDecorations="Underline"
+               TextColor="#8e7768"
         />
-        <Button Text= "Map Page"
-          HorizontalOptions= "Center"
-          VerticalOptions= "CenterAndExpand"
-          Clicked= "SecondButtonClicked"
-        />
-        <Button Text= "3rd Page"
-          HorizontalOptions= "Center"
-          VerticalOptions= "CenterAndExpand"
-          Clicked= "ThirdButtonClicked"
-        />
-        <Button Text= "Property List Page"
-                HorizontalOptions= "Center"
-                VerticalOptions= "CenterAndExpand"
-                Clicked= "FourthButtonClicked"
-        />
+        
+        <Button Text="My Properties"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "FourthButtonClicked"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            
+        
+        <StackLayout Orientation="Horizontal" Margin="4">
+            
+            <Button Text= "Upcoming Services"
+                    HorizontalOptions= "FillAndExpand"
+                    VerticalOptions= "Start"
+                    Clicked= "OnButtonClicked"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+       
+            <Button Text= "Terms of Service"
+                    HorizontalOptions= "FillAndExpand"
+                    VerticalOptions= "Start"
+                    Clicked= "ThirdButtonClicked"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+        </StackLayout>
     </StackLayout>
     
     

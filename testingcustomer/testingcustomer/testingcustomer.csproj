@@ -18,6 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\UpdateNotesPage.xaml.cs">
+      <DependentUpon>UpdateNotesPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\UpdateNotesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\CustomerMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
