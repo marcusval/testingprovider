@@ -23,8 +23,9 @@
                TextDecorations="Underline"
                TextColor="#8e7768"
         />
+        <StackLayout>
 
-        <Label Text="
+            <Label Text="
                {Binding CurrentCustomer.FirstName}" 
                FontSize="Large" 
                HorizontalTextAlignment="Center"
@@ -32,7 +33,7 @@
                FontAttributes="Bold"
                TextColor="#697775"
         />
-        <Label Text="
+            <Label Text="
                {Binding CurrentCustomer.EmailAddress}" 
                FontSize="Large" 
                HorizontalTextAlignment="Center"
@@ -40,7 +41,7 @@
                FontAttributes="Bold"
                TextColor="#697775"
         />
-        <Label Text="
+            <Label Text="
                {Binding CurrentCustomer.PhoneNum}" 
                FontSize="Large" 
                HorizontalTextAlignment="Center"
@@ -48,6 +49,9 @@
                FontAttributes="Bold"
                TextColor="#697775"
         />
+
+        </StackLayout>
+       
 
         <Button Text="My Properties"
                     HorizontalOptions="FillAndExpand"
