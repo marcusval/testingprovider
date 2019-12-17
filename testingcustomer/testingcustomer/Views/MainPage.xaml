@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:testingcustomer.ViewModels"
              mc:Ignorable="d"
              x:Class="testingcustomer.MainPage">
-
+    
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    
     <StackLayout BackgroundColor="LightGray" Padding="8">
         <!-- Place new controls here -->
 
@@ -18,7 +23,32 @@
                TextDecorations="Underline"
                TextColor="#8e7768"
         />
-        
+
+        <Label Text="
+               {Binding CurrentCustomer.FirstName}" 
+               FontSize="Large" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="#697775"
+        />
+        <Label Text="
+               {Binding CurrentCustomer.EmailAddress}" 
+               FontSize="Large" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="#697775"
+        />
+        <Label Text="
+               {Binding CurrentCustomer.PhoneNum}" 
+               FontSize="Large" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="#697775"
+        />
+
         <Button Text="My Properties"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
