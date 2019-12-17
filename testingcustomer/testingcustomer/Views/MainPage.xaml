@@ -46,7 +46,7 @@
                FontSize="Large" 
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"
-               FontAttributes="Bold"
+               
                TextColor="#697775"
         />
 
