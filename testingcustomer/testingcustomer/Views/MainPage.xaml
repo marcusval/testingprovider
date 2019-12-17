@@ -3,10 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModels="clr-namespace:testingcustomer.ViewModels"
              mc:Ignorable="d"
              x:Class="testingcustomer.MainPage">
 
-    <StackLayout BackgroundColor="LightGray" Padding="8">
+    <ContentPage.BindingContext>
+        <ViewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray" Padding="8">
         <!-- Place new controls here -->
 
 
@@ -18,8 +24,12 @@
                TextDecorations="Underline"
                TextColor="#8e7768"
         />
-        
-        <Button Text="My Properties"
+
+            <Label 
+             Text="{Binding pageCurrentCustomer.FirstName}" TextColor ="Black" FontSize ="Large"
+         />
+
+            <Button Text="My Properties"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
                     Clicked= "FourthButtonClicked"
@@ -56,7 +66,7 @@
             />
         </StackLayout>
     </StackLayout>
-    
-    
+
+    </ContentPage.Content>
 
 </ContentPage>

@@ -18,6 +18,7 @@ namespace testingcustomer.Services
         {
             _httpClient = new HttpClient();
             _customerAPI = RestService.For<ICustomerInterface>("https://finalprojectapitest.azurewebsites.net/api");
+            
         }
 
         public async Task<List<House>> GetHouseListForCustomer(string customerID)
