@@ -31,6 +31,9 @@ namespace testingcustomer.Services
         [Get("/Notes")]
         Task<List<Note>> GetAllNotes();
 
+        [Get("Customers/{ID}")]
+        Task<Customer> GetCustomerById(string ID); 
+
         [Post("/Notes")]
         Task<Note> PostNotesToHouse(Note newNotes);
 

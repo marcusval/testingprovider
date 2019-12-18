@@ -14,7 +14,7 @@
     <PackageReference Include="Plugin.RestClient" Version="1.1.0" />
     <PackageReference Include="Refit" Version="4.7.9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991221" />
   </ItemGroup>
 
   <ItemGroup>
