@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="testingcustomer.MainPage">
 
-    <StackLayout BackgroundColor="LightGray" Padding="8">
+    <StackLayout BackgroundColor="White" Padding="8">
         <!-- Place new controls here -->
 
 
@@ -18,8 +18,38 @@
                TextDecorations="Underline"
                TextColor="#8e7768"
         />
-        
-        <Button Text="My Properties"
+
+        <StackLayout Orientation="Vertical" BackgroundColor="White"  Padding="8">
+                <Label Text="
+                   {Binding CurrentCustomer.FirstName}" 
+                   FontSize="Large" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="#697775"
+                />
+                <Label Text="
+                   {Binding CurrentCustomer.EmailAddress}" 
+                   FontSize="Large" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="#697775"
+                />
+                <Label Text="
+                   {Binding CurrentCustomer.PhoneNum}" 
+                   FontSize="Large" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="#697775"
+                />
+
+            </StackLayout>
+     
+
+
+        <Button Text="Properties"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
                     Clicked= "FourthButtonClicked"
