@@ -4,8 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             
              x:Class="testingcustomer.MainPage">
-
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
     <StackLayout BackgroundColor="White" Padding="8">
         <!-- Place new controls here -->
 
@@ -19,9 +24,9 @@
                TextColor="#8e7768"
         />
 
-        <StackLayout Orientation="Vertical" BackgroundColor="White"  Padding="8">
+       
                 <Label Text="
-                   {Binding CurrentCustomer.FirstName}" 
+                   Hello" 
                    FontSize="Large" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -45,7 +50,7 @@
                    TextColor="#697775"
                 />
 
-            </StackLayout>
+            
      
 
 
@@ -84,7 +89,9 @@
                     FontAttributes="Bold"
                     BackgroundColor="#697775"
             />
+            
         </StackLayout>
+        
     </StackLayout>
 
     </ContentPage.Content>
