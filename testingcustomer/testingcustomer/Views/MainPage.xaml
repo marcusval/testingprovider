@@ -3,37 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:testingcustomer.ViewModels"
              mc:Ignorable="d"
-             
-             x:Class="testingcustomer.MainPage">
+             x:Class="testingcustomer.Views.MainPage">
+
     <ContentPage.BindingContext>
         <viewModels:MainPageViewModel/>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-    <StackLayout BackgroundColor="White" Padding="8">
-        <!-- Place new controls here -->
-
-
-        <Label Margin="10,30,10,10"
+        <StackLayout BackgroundColor="White" Padding="8">
+            
+            <Label 
+                Margin="10,30,10,10"
                Text="Coy Land Techs"
                HorizontalTextAlignment="Center"
                FontSize="31"
                FontAttributes="Bold"
                TextDecorations="Underline"
                TextColor="#8e7768"
-        />
-
-       
-                <Label Text="
-                   Hello" 
+            /> 
+            <Label Text="{Binding CurrentCustomer.FirstName, StringFormat='Hello {0:F}'}" 
                    FontSize="Large" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    FontAttributes="Bold"
                    TextColor="#697775"
                 />
-                <Label Text="
+            <Label Text="
                    {Binding CurrentCustomer.EmailAddress}" 
                    FontSize="Large" 
                    HorizontalTextAlignment="Center"
@@ -41,7 +38,7 @@
                    FontAttributes="Bold"
                    TextColor="#697775"
                 />
-                <Label Text="
+            <Label Text="
                    {Binding CurrentCustomer.PhoneNum}" 
                    FontSize="Large" 
                    HorizontalTextAlignment="Center"
@@ -50,11 +47,7 @@
                    TextColor="#697775"
                 />
 
-            
-     
-
-
-        <Button Text="Properties"
+            <Button Text="Properties"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
                     Clicked= "FourthButtonClicked"
@@ -65,10 +58,9 @@
                     BackgroundColor="#697775"
             />
             
-        
-        <StackLayout Orientation="Horizontal" Margin="4">
-            
-            <Button Text= "Upcoming Services"
+            <StackLayout Orientation="Horizontal" Margin="4">
+
+                <Button Text= "Upcoming Services"
                     HorizontalOptions= "FillAndExpand"
                     VerticalOptions= "Start"
                     Clicked= "OnButtonClicked"
@@ -77,9 +69,9 @@
                     FontSize="Medium"
                     FontAttributes="Bold"
                     BackgroundColor="#697775"
-            />
-       
-            <Button Text= "Terms of Service"
+                />
+
+                <Button Text= "Terms of Service"
                     HorizontalOptions= "FillAndExpand"
                     VerticalOptions= "Start"
                     Clicked= "ThirdButtonClicked"
@@ -89,11 +81,7 @@
                     FontAttributes="Bold"
                     BackgroundColor="#697775"
             />
-            
+            </StackLayout>
         </StackLayout>
-        
-    </StackLayout>
-
     </ContentPage.Content>
-
 </ContentPage>
