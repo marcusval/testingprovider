@@ -18,16 +18,16 @@
             <Label 
                 Text="Property Details"
                 HorizontalTextAlignment="Center"
-                FontSize="31"
+                FontSize="29"
                 FontAttributes="Bold"
                 TextDecorations="Underline"
                 TextColor="#697775"
             />
 
             <StackLayout Orientation="Horizontal" Padding="5, 30, 5, 5">
-                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 16">
                 <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
@@ -62,7 +62,7 @@
             <Label Margin="0,10,0,0"
                 Text="Property Notes"
                 HorizontalTextAlignment="Center"
-                FontSize="31"
+                FontSize="29"
                 FontAttributes="Bold"
                 TextDecorations="Underline"
                 TextColor="#8e7768"

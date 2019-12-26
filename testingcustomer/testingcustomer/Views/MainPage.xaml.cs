@@ -25,5 +25,10 @@ namespace testingcustomer.Views
         {
             await Navigation.PushAsync(new CustomerPropertyList());
         }
+
+        async void SecondButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new UsefulContacts()); 
+        }
     }
 }

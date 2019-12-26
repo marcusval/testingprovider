@@ -12,18 +12,12 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Padding="8">
-            
-            <Label 
-                Margin="10,30,10,10"
-               Text="Coy Land Techs"
-               HorizontalTextAlignment="Center"
-               FontSize="31"
-               FontAttributes="Bold"
-               TextDecorations="Underline"
-               TextColor="#8e7768"
-            /> 
-            <Label Text="{Binding CurrentCustomer.FirstName, StringFormat='Hello {0:F}'}" 
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="8">
+
+            <Image Source="icon.png" HeightRequest="160" VerticalOptions="StartAndExpand"  />
+
+            <StackLayout BackgroundColor="White" Margin="15,15" Padding="5,25">
+                <Label Text="{Binding CurrentCustomer.FirstName, StringFormat='Hello {0:F}'}" 
                    FontSize="Large" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -46,11 +40,22 @@
                    FontAttributes="Bold"
                    TextColor="#697775"
                 />
+        </StackLayout>
 
-            <Button Text="Properties"
+        <Button Text="My Properties"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
                     Clicked= "FourthButtonClicked"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Useful Contacts"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "SecondButtonClicked"
                     CornerRadius="11"
                     TextColor="#ffffff"
                     FontSize="Medium"

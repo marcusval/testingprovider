@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Plugin.RestClient" Version="1.1.0" />
     <PackageReference Include="Refit" Version="4.7.9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
@@ -43,6 +51,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SinglePropertyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UsefulContacts.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -66,7 +66,8 @@ namespace testingcustomer.ViewModels
             var viewCurrentHouseService = new HouseServices();
             CurrentHouse = await viewCurrentHouseService.GetSingleHouseDetailPage(houseIDToFindSingleHouse);
             CurrentHouseService = await viewCurrentHouseService.GetServiceForHouse(houseIDToFindSingleHouse);
-            CurrentHouseNotes = await viewCurrentHouseService.GetNotesForHouse(houseIDToFindSingleHouse); 
+            CurrentHouseNotes = await viewCurrentHouseService.GetNotesForHouse(houseIDToFindSingleHouse);
+            CurrentHouseNotes.Reverse();
             return CurrentHouse; 
         }
 
