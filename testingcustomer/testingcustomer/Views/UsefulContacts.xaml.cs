@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace testingcustomer.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class UsefulContacts : ContentPage
+    public partial class UsefulContacts : CarouselPage
     {
         public UsefulContacts()
         {

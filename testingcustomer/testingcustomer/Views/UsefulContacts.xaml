@@ -1,16 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             Title="Useful Contacts"
-             x:Class="testingcustomer.Views.UsefulContacts">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                  
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  Title="Useful Contacts"
+                  x:Class="testingcustomer.Views.UsefulContacts">
+
+
+    <ContentPage>
+        <StackLayout BackgroundColor="LightGray" Padding="15">
+            <Image Source="icon.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="LightGray" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="farleftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+        
+    <ContentPage>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+            <Image Source="digalert.png"  HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="leftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
+        </StackLayout>
+    </ContentPage>
+        
+    <ContentPage>
+        <StackLayout BackgroundColor="White" Padding="15">
+            <Image Source="digalert.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="rightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"  />
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+            <Image Source="digalert.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="LightGray" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="farrightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+
+</CarouselPage>

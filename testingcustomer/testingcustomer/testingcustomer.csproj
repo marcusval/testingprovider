@@ -11,11 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\farleftpageicon.png" />
+    <None Remove="Images\farrightpageicon.png" />
     <None Remove="Images\icon.png" />
+    <None Remove="Images\leftpageicon.png" />
+    <None Remove="Images\rightpageicon.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\farleftpageicon.png" />
+    <EmbeddedResource Include="Images\farrightpageicon.png" />
     <EmbeddedResource Include="Images\icon.png" />
+    <EmbeddedResource Include="Images\leftpageicon.png" />
+    <EmbeddedResource Include="Images\rightpageicon.png" />
   </ItemGroup>
 
   <ItemGroup>
