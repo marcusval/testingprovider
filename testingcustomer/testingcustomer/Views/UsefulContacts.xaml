@@ -9,33 +9,103 @@
 
 
     <ContentPage>
-        <StackLayout BackgroundColor="LightGray" Padding="15">
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
             <Image Source="icon.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="LightGray" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Call Now"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
             <Image Source="farleftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
         </StackLayout>
     </ContentPage>
         
     <ContentPage>
-        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+        <StackLayout BackgroundColor="White" Padding="15">
             <Image Source="digalert.png"  HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Call Now"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
             <Image Source="leftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
         </StackLayout>
     </ContentPage>
         
     <ContentPage>
-        <StackLayout BackgroundColor="White" Padding="15">
-            <Image Source="digalert.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+            <Image Source="pinbadge.png" HeightRequest="175" VerticalOptions="StartAndExpand"  />
+            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
             <Image Source="rightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"  />
         </StackLayout>
     </ContentPage>
 
     <ContentPage>
-        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
-            <Image Source="digalert.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="LightGray" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout BackgroundColor="White" Padding="15">
+            <Image Source="rachiologo.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Call"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
             <Image Source="farrightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage>
