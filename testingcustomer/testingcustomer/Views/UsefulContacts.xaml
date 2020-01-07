@@ -11,7 +11,9 @@
     <ContentPage>
         <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
             <Image Source="icon.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Have questions or concerns about your service?"  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            
             <Button Text="Call Now"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
@@ -39,7 +41,9 @@
     <ContentPage>
         <StackLayout BackgroundColor="White" Padding="15">
             <Image Source="digalert.png"  HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Starting a project that requires digging?" FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            
             <Button Text="Call Now"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
@@ -67,7 +71,9 @@
     <ContentPage>
         <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
             <Image Source="pinbadge.png" HeightRequest="175" VerticalOptions="StartAndExpand"  />
-            <Label Text="WhiteSmoke" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Need ideas for your landscape project?"  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            
             <Button Text="Visit Website"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
@@ -85,7 +91,9 @@
     <ContentPage>
         <StackLayout BackgroundColor="White" Padding="15">
             <Image Source="rachiologo.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
-            <Label Text="White" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="The smart timer recommended by Coy Land Techs"  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            
             <Button Text="Call"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"
