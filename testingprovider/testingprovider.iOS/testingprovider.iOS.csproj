@@ -137,4 +137,16 @@
       <Name>testingprovider</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mapicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usefulcontacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\listicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon.png" />
+  </ItemGroup>
 </Project>

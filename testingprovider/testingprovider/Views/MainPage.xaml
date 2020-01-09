@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            xmlns:local="clr-namespace:testingprovider.Views" x:Class="testingprovider.MainPage"
+             BarTextColor="DarkOliveGreen"
+            BarBackgroundColor="WhiteSmoke"
+             >
+
+    <local:HomePage Title="Home" IconImageSource="homeicon.png"></local:HomePage>
+    <local:PropertyListPage Title="List" IconImageSource="listicon.png"></local:PropertyListPage>
+    <local:MapListPage Title="Map" IconImageSource="mapicon.png"></local:MapListPage>
+    <local:UsefulContactsPage Title="Contacts" IconImageSource="usefulcontacts.png"></local:UsefulContactsPage>
+    
+   
+    
+</TabbedPage>
