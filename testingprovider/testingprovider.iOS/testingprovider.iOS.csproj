@@ -149,4 +149,28 @@
   <ItemGroup>
     <BundleResource Include="Resources\homeicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digalert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\farleftpageicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\farrightpageicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\leftpageicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinbadge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rachiologo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\rightpageicon.png" />
+  </ItemGroup>
 </Project>

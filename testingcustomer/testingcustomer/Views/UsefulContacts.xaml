@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
     <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                  
                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                   Title="Useful Contacts"
                   x:Class="testingcustomer.Views.UsefulContacts">

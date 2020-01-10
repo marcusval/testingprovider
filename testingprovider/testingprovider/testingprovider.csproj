@@ -11,6 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\digalert.png" />
+    <None Remove="Images\farleftpageicon.png" />
+    <None Remove="Images\farrightpageicon.png" />
+    <None Remove="Images\icon.png" />
+    <None Remove="Images\leftpageicon.png" />
+    <None Remove="Images\rightpageicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\digalert.png" />
+    <EmbeddedResource Include="Images\farleftpageicon.png" />
+    <EmbeddedResource Include="Images\farrightpageicon.png" />
+    <EmbeddedResource Include="Images\icon.png" />
+    <EmbeddedResource Include="Images\leftpageicon.png" />
+    <EmbeddedResource Include="Images\rightpageicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Refit" Version="5.0.23" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />

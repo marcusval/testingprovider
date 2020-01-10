@@ -1,18 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="testingprovider.Views.UsefulContactsPage"
-             
-             >
- 
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Usful Contacts Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="testingprovider.Views.UsefulContactsPage">
+    <ContentPage>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+            <Image Source="icon.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="Need staff support for customers or your route?"  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Call Now"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coyphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "coywebsitebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Image Source="farleftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+
+    <ContentPage>
+        <StackLayout BackgroundColor="White" Padding="15">
+            <Image Source="digalert.png"  HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="Any project requiring excavation needs a dig alert notice." FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Call Now"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "digphonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "digwebsitebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Image Source="leftpageicon.png" HeightRequest="25" VerticalOptions="EndAndExpand"  />
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="15">
+            <Image Source="pinbadge.png" HeightRequest="175" VerticalOptions="StartAndExpand"  />
+            <Label Text="When customers ask for project ideas, refer them to online idea boards."  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "pinwebsitebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Image Source="rightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"  />
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage>
+        <StackLayout BackgroundColor="White" Padding="15">
+            <Image Source="rachiologo.png" HeightRequest="180" VerticalOptions="StartAndExpand"  />
+            <Label Text="The smart timer recommended by Coy Land Techs."  FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Call"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "rachiophonebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Button Text="Visit Website"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "rachiowebsitebutton"
+                    CornerRadius="11"
+                    TextColor="#ffffff"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+            />
+            <Image Source="farrightpageicon" HeightRequest="25" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+
+
+</CarouselPage>
