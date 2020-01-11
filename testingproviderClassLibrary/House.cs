@@ -26,5 +26,6 @@ namespace testingproviderClassLibrary
         public string Id_C { get; set; }
         public string Long { get; set; }
         public string Lat { get; set; }
+
     }
 }

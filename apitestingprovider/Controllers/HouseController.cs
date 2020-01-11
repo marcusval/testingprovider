@@ -19,6 +19,38 @@ namespace apitestingprovider.Controllers
             }
         }
 
+        // method to get all houses belonging to a certain provider
+
+        public IEnumerable<Route> GetRoutesForProvider(string providerID) 
+        { 
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities()) 
+            {
+                return entities.Routes.Where(e => e.Id_P == providerID).ToList();
+            }
+        }
+
+        public IEnumerable<House> GetHousesForProvider(string providerID)
+        {
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
+            {
+                var routeList = GetRoutesForProvider(providerID);
+                var houseList = GetAllHouses();
+                var HouseList = new List<House>(); 
+
+                foreach(var value in routeList)
+                {
+                    foreach(var value2 in houseList)
+                    {
+                        if (value.Id_R.ToString() == value2.Id_R.ToString()) {
+                            HouseList.Add(value2); 
+                        }
+                    }
+                }
+                return HouseList; 
+            }
+        }
+
+
         //use this method to show a list of all the houses belonging to a customer, use for customer application
         public IEnumerable<House> GetHouseListForCustomer(string customerID) {
             using (CoyApp_dbEntities entities = new CoyApp_dbEntities()) {
