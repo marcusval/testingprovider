@@ -12,13 +12,7 @@ namespace apitestingprovider.Controllers
 {
     public class ServiceController : ApiController
     {
-        /*public IEnumerable<Service> GetAllServices()
-        {
-            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
-            {
-                return entities.Services.ToList();
-            }
-        }*/
+
 
         // https://localhost:44334/api/service?passedHouse=104 use this format api call to get the data to work
         public Service GetServiceForHouse(string passedHouse)

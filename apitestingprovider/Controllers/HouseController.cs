@@ -19,34 +19,30 @@ namespace apitestingprovider.Controllers
             }
         }
 
-        // method to get all houses belonging to a certain provider
-
-        public IEnumerable<Route> GetRoutesForProvider(string providerID) 
-        { 
-            using (CoyApp_dbEntities entities = new CoyApp_dbEntities()) 
-            {
-                return entities.Routes.Where(e => e.Id_P == providerID).ToList();
-            }
-        }
-
-        public IEnumerable<House> GetHousesForProvider(string providerID)
+       
+        //use url style below when making a call to test function in api, 3535 is a provider ID number  
+        //https://finalprojectapitest.azurewebsites.net/api/House?providerID=3535
+        
+        //function to get a List of houses that belong to a provider, will list all houses on every route that the provider services.
+        public IEnumerable <House> GetHousesForProvider(string providerID)
         {
             using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
             {
-                var routeList = GetRoutesForProvider(providerID);
-                var houseList = GetAllHouses();
-                var HouseList = new List<House>(); 
+                List<Route> routeList = entities.Routes.Where(e => e.Id_P == providerID).ToList();
+                List<House> houseList = entities.Houses.ToList();
+                List<House> HouseLists = new List<House>(); 
 
-                foreach(var value in routeList)
+                foreach(Route routevalue in routeList)
                 {
-                    foreach(var value2 in houseList)
+                    foreach(House housevalue in houseList)
                     {
-                        if (value.Id_R.ToString() == value2.Id_R.ToString()) {
-                            HouseList.Add(value2); 
+                        if ((routevalue.Id_R.ToString()) == (housevalue.Id_R)) 
+                        {
+                            HouseLists.Add(housevalue); 
                         }
                     }
                 }
-                return HouseList; 
+                return HouseLists; 
             }
         }
 
