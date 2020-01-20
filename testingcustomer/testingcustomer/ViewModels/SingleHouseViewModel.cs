@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using testingcustomer.Annotations;
 using testingcustomer.Models;
 using testingcustomer.Services;
-using Newtonsoft.Json;
-using Refit;
-using testingcustomer.Views;
 
 namespace testingcustomer.ViewModels
 {
@@ -18,7 +13,7 @@ namespace testingcustomer.ViewModels
         private string houseIDToFindSingleHouse { get; set; }
         private Service _currentHouseService;
         private House _currentHouse;
-        private List<Note> _currentHouseNotes; 
+        private List<Note> _currentHouseNotes;
 
         //used to display a house object
         public House CurrentHouse
@@ -68,7 +63,7 @@ namespace testingcustomer.ViewModels
             CurrentHouseService = await viewCurrentHouseService.GetServiceForHouse(houseIDToFindSingleHouse);
             CurrentHouseNotes = await viewCurrentHouseService.GetNotesForHouse(houseIDToFindSingleHouse);
             CurrentHouseNotes.Reverse();
-            return CurrentHouse; 
+            return CurrentHouse;
         }
 
 

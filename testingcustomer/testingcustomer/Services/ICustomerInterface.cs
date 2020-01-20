@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Refit;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Refit;
-using Newtonsoft.Json;
 using testingcustomer.Models;
 
 namespace testingcustomer.Services
@@ -35,9 +32,6 @@ namespace testingcustomer.Services
         Task<Note> PostNotesToHouse(Note newNotes);
 
         [Post("/Notes")]
-        Task<Note> PostNotesUpdate(Note notes); 
-
-
-
+        Task<Note> PostNotesUpdate(Note notes);
     }
 }

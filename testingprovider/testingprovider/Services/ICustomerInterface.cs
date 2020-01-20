@@ -1,16 +1,13 @@
-﻿using System;
+﻿using Refit;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Refit;
-using Newtonsoft.Json;
 using testingprovider.Models;
 namespace testingprovider.Services
 {
     public interface ICustomerInterface
     {
-        [Get("House/{providerID}")]
-        Task<List<House>> GetHousesForProvider(string providerID); 
+        [Get("/House?providerID={providerID}")]
+        Task<List<House>> GetHousesForProvider(string providerID);
 
         [Get("/nextservices")]
         Task<List<NextService>> GetListOfNextServices();
@@ -38,8 +35,5 @@ namespace testingprovider.Services
 
         [Post("/Notes")]
         Task<Note> PostNotesUpdate(Note notes);
-
-
-
     }
 }

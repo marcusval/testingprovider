@@ -1,10 +1,10 @@
 ﻿using Refit;
 using System.Net.Http;
 using System.Threading.Tasks;
-using testingcustomer.Models;
+using testingprovider.Models;
 
 
-namespace testingcustomer.Services
+namespace testingprovider.Services
 {
     public class CustomerInfoService
     {

@@ -1,26 +1,26 @@
 ﻿using Refit;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using testingcustomer.Models;
+using testingprovider.Models;
 
-
-namespace testingcustomer.Services
+namespace testingprovider.Services
 {
-    public class CustomerInfoService
+    public class NextServiceServices
     {
 
         private readonly HttpClient _httpClient;
         private readonly ICustomerInterface _customerAPI;
 
-        public CustomerInfoService()
+        public NextServiceServices()
         {
             _httpClient = new HttpClient();
             _customerAPI = RestService.For<ICustomerInterface>("https://finalprojectapitest.azurewebsites.net/api");
         }
 
-        public async Task<Customer> GetCustomerById(string ID)
+        public async Task<List<NextService>> GetListOfNextServices()
         {
-            return await _customerAPI.GetCustomerById(ID);
+            return await _customerAPI.GetListOfNextServices();
         }
 
     }

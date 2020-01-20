@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Refit;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Refit;
 using testingprovider.Models;
-using testingprovider.Services;
 
 namespace testingprovider.Services
 {
@@ -26,5 +25,14 @@ namespace testingprovider.Services
             return await _customerAPI.GetServiceForHouse(passedHouse);
         }
 
+        public async Task<List<House>> GetHousesForProvider(string providerID)
+        {
+            return await _customerAPI.GetHousesForProvider(providerID);
+        }
     }
+
+
+    // [Get("/House?providerID={providerID}")]
+    // Task<List<House>> GetHousesForProvider(string providerID);
 }
+

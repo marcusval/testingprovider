@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using Refit; 
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
 using System.Threading.Tasks;
 
 namespace testingcustomer.Models

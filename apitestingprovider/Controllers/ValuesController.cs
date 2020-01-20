@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace apitestingprovider.Controllers
@@ -22,19 +18,19 @@ namespace apitestingprovider.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            return strings[id]; 
+            return strings[id];
         }
 
         // POST api/values
         public void Post([FromBody]string value)
         {
-            strings.Add(value); 
+            strings.Add(value);
         }
 
         // PUT api/values/5
         public void Put(int id, [FromBody]string value)
         {
-            strings[id] = value; 
+            strings[id] = value;
         }
 
         // DELETE api/values/5

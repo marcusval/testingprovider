@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Refit;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Refit;
 using testingcustomer.Models;
-using testingcustomer.Services;
 
 namespace testingcustomer.Services
 {
     public class NextServiceServices
     {
-        
+
         private readonly HttpClient _httpClient;
         private readonly ICustomerInterface _customerAPI;
 

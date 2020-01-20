@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using testingcustomer.Models;
+using testingprovider.Models;
 
 
-namespace testingcustomer.Services
+namespace testingprovider.Services
 {
     public class HouseServices
     {
@@ -18,6 +18,12 @@ namespace testingcustomer.Services
             _httpClient = new HttpClient();
             _customerAPI = RestService.For<ICustomerInterface>("https://finalprojectapitest.azurewebsites.net/api");
 
+        }
+
+
+        public async Task<List<House>> GetHousesForProvider(string providerID)
+        {
+            return await _customerAPI.GetHousesForProvider(providerID);
         }
 
         public async Task<List<House>> GetHouseListForCustomer(string customerID)

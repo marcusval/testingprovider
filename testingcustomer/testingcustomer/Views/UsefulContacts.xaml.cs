@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,7 +19,7 @@ namespace testingcustomer.Views
             {
                 PhoneDialer.Open("9513940848");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 DisplayAlert("Unable to make calls at this time", "Please try again later", "OK");
             }
@@ -36,7 +32,7 @@ namespace testingcustomer.Views
                 await Browser.OpenAsync("https://www.coylandtechs.com/", BrowserLaunchMode.SystemPreferred);
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 await DisplayAlert("Unable to open a browser at this time", "Please try again later", "OK");
             }

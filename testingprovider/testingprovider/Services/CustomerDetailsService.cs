@@ -1,18 +1,15 @@
 ﻿using Refit;
 using System.Net.Http;
 using System.Threading.Tasks;
-using testingcustomer.Models;
-
-
-namespace testingcustomer.Services
+using testingprovider.Models;
+namespace testingprovider.Services
 {
-    public class CustomerInfoService
+    public class CustomerDetailsService
     {
-
         private readonly HttpClient _httpClient;
         private readonly ICustomerInterface _customerAPI;
 
-        public CustomerInfoService()
+        public CustomerDetailsService()
         {
             _httpClient = new HttpClient();
             _customerAPI = RestService.For<ICustomerInterface>("https://finalprojectapitest.azurewebsites.net/api");
@@ -22,6 +19,5 @@ namespace testingcustomer.Services
         {
             return await _customerAPI.GetCustomerById(ID);
         }
-
     }
 }

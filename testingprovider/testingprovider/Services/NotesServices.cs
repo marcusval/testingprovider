@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using testingcustomer.Models;
-namespace testingcustomer.Services
+using testingprovider.Models;
+namespace testingprovider.Services
 {
     public class NotesServices
     {

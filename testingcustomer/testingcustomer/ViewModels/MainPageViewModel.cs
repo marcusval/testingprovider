@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using testingcustomer.Annotations;
 using testingcustomer.Models;
 using testingcustomer.Services;
-using Newtonsoft.Json;
-using Refit;
 
 namespace testingcustomer.ViewModels
 {

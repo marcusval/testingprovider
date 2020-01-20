@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace apitestingprovider
 {
@@ -21,13 +18,13 @@ namespace apitestingprovider
             );
             // The code below returns the data in Json format, it can still give back in xml when requested
             // This is better than the first line below since it still has the option for the xml if needed
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html")); 
-            
-            
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
+
+
             // TAKE OUT THE COMMENT FOR THE LINE BELOW TO ONLY BE ABLE TO RETURN JSON DATA
             //config.Formatters.Remove(config.Formatters.XmlFormatter);
             //config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
-                
+
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using System;
-using testingcustomer.Views;
+﻿using testingcustomer.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace testingcustomer
 {
@@ -29,8 +27,8 @@ namespace testingcustomer
             // Handle when your app resumes
         }
 
-        
+
         public static string _currentHouseID { get; set; }
-        public static string _currentCustomerID = "132"; 
+        public static string _currentCustomerID = "132";
     }
 }

@@ -28,7 +28,7 @@ namespace testingcustomer.Views
 
         async void SecondButtonClicked(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new UsefulContacts()); 
+            await Navigation.PushAsync(new UsefulContacts());
         }
     }
 }

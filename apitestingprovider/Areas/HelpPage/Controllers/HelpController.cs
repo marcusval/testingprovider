@@ -1,8 +1,8 @@
+using apitestingprovider.Areas.HelpPage.ModelDescriptions;
+using apitestingprovider.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using apitestingprovider.Areas.HelpPage.ModelDescriptions;
-using apitestingprovider.Areas.HelpPage.Models;
 
 namespace apitestingprovider.Areas.HelpPage.Controllers
 {

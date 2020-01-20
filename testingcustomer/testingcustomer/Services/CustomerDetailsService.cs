@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Refit;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Refit;
 using testingcustomer.Models;
-using testingcustomer.Services;
 namespace testingcustomer.Services
 {
     public class CustomerDetailsService
@@ -19,7 +17,7 @@ namespace testingcustomer.Services
 
         public async Task<Customer> GetCustomerById(string ID)
         {
-            return await _customerAPI.GetCustomerById(ID); 
+            return await _customerAPI.GetCustomerById(ID);
         }
     }
 }

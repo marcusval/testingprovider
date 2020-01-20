@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace testingcustomer.Models
 {
     public class Note
     {
-       [JsonProperty(PropertyName = "Id_N")]
+        [JsonProperty(PropertyName = "Id_N")]
         public int Id_N { get; set; }
 
         [JsonProperty(PropertyName = "FromProvider")]
