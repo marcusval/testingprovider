@@ -3,15 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:testingprovider.ViewModels"
              mc:Ignorable="d"
              x:Class="testingprovider.Views.PropertyListPage"
-             
              >
+    <ContentPage.BindingContext>
+        <viewModels:HouseViewModel/>
+    </ContentPage.BindingContext>
+
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Property List Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20" BackgroundColor="White" >
+            <Label 
+                Text="Property List"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="DarkOliveGreen"
+            />
+            <ListView ItemsSource="{Binding CustomerHouseList}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5,35">
+
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding StreetNumber}" TextColor="Black" FontSize="Large" />
+                                    <Label Text="{Binding StreetName}" TextColor="Black" FontSize="Large" />
+                                    <Label Text="{Binding StreetSuffix}" TextColor="Black" FontSize="Large" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Padding="5,5,5,15">
+                                    <Label Text="{Binding City}" FontAttributes="Bold" TextColor="DarkOliveGreen" FontSize="Large" />
+                                    <Label Text="{Binding State, StringFormat=', {0:F}'}" TextColor="Black" FontSize="Large" />
+                                </StackLayout>
+
+                                <Button Text= "View Details"
+                                        ClassId="{Binding Id_H}"
+                                        HorizontalOptions= "Center"
+                                        VerticalOptions= "CenterAndExpand"
+                                        Clicked= "ViewPropertyDetails"
+                                        CornerRadius="11"
+                                        TextColor="White"
+                                        FontSize="Medium"
+                                        FontAttributes="Bold"
+                                        BackgroundColor="#697775"
+
+                                />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
+
+
 </ContentPage>

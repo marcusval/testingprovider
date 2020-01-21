@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,13 @@ namespace testingprovider.Views
         public PropertyListPage()
         {
             InitializeComponent();
+        }
+
+        async void ViewPropertyDetails(object sender, EventArgs args)
+        {
+            var myVar = sender as Button;
+            App._currentHouseID = myVar.ClassId;
+            await Navigation.PushAsync(new SinglePropertyPage());
         }
     }
 }

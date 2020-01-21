@@ -9,7 +9,7 @@ namespace testingprovider.ViewModels
     public class MapListPageViewModel : INotifyPropertyChanged
     {
         private string providerId;
-        public List<House> HouseListForMap = new List<House>();
+        public List<House> HouseListForMaps = new List<House>();
 
         public MapListPageViewModel()
         {
@@ -23,8 +23,8 @@ namespace testingprovider.ViewModels
         private async Task<List<House>> InitializeDataAsync()
         {
             var currentHouseService = new HouseServices();
-            HouseListForMap = await currentHouseService.GetHousesForProvider(providerId);
-            return HouseListForMap;
+            HouseListForMaps = await currentHouseService.GetHousesForProvider(providerId);
+            return HouseListForMaps;
         }
 
 

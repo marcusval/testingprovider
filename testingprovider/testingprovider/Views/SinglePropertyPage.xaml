@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModels="clr-namespace:testingprovider.ViewModels"
+             mc:Ignorable="d"
+             x:Class="testingprovider.Views.SinglePropertyPage">
+    <ContentPage.BindingContext>
+        <ViewModels:SingleHouseViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,5" BackgroundColor="#ffffff" >
+            <Label 
+                Text="Property Details"
+                HorizontalTextAlignment="Center"
+                FontSize="29"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="#697775"
+            />
+
+            <StackLayout Orientation="Horizontal" Padding="5, 30, 5, 5">
+                <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="24" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 16">
+                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <Label 
+                Text="{Binding CurrentHouseService.Frequency, StringFormat='Service Frequency: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="#8e7768"
+            />
+            <Label 
+                Text="{Binding CurrentHouseService.ServiceType, StringFormat='Service Type: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="#8e7768"
+            />
+
+            <Button Text= "Add Note"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    Clicked= "AddNotePage"
+                    CornerRadius="11"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+                    Margin="5, 25, 5, 2"
+            />
+
+            <Label Margin="0,10,0,0"
+                Text="Property Notes"
+                HorizontalTextAlignment="Center"
+                FontSize="29"
+                FontAttributes="Bold"
+                TextDecorations="Underline"
+                TextColor="#8e7768"
+            />
+
+            <ListView ItemsSource="{Binding CurrentHouseNotes}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="0, 20" Padding="2,2,2,10">
+                                <Label
+                                    Text="{Binding Ndate, StringFormat='Date Written: {0:d}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#8e7768" FontSize="20" FontAttributes="Bold"
+                                />
+                                <Label
+                                    Text="{Binding FromProvider, StringFormat='From Provider: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#697775" FontSize="20" FontAttributes="Bold"
+                                />
+
+                                <Label
+                                    Text="{Binding WrittenNote, StringFormat='Message: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#697775" FontSize="20" FontAttributes="Bold"
+                                 />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
