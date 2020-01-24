@@ -19,5 +19,6 @@ namespace testingprovider.Views
             App._currentHouseID = myVar.ClassId;
             await Navigation.PushAsync(new SinglePropertyPage());
         }
+
     }
 }

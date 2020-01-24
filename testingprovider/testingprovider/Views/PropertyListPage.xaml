@@ -23,7 +23,7 @@
                 TextDecorations="Underline"
                 TextColor="DarkOliveGreen"
             />
-            <ListView ItemsSource="{Binding CustomerHouseList}" HasUnevenRows="True" >
+            <ListView ItemsSource="{Binding ProviderHouseList}" HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -10,15 +10,29 @@ namespace testingprovider.ViewModels
 {
     public class HouseViewModel : INotifyPropertyChanged
     {
-        private string currentCustomer = App._currentCustomerID;
+        private string providerId = App._currentProviderID;
+        public string houseIDToFindSingleHouse { get; set; }
+        private Service _currentHouseService;
         private List<House> _customerHouseList;
+        public List<House> _provoiderHouseList;
+        
 
-        public List<House> CustomerHouseList
+        public List<House> ProviderHouseList
         {
-            get { return _customerHouseList; }
+            get { return _provoiderHouseList; }
             set
             {
-                _customerHouseList = value;
+                _provoiderHouseList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Service CurrentHouseService
+        {
+            get { return _currentHouseService; }
+            set
+            {
+                _currentHouseService = value;
                 OnPropertyChanged();
             }
         }
@@ -31,14 +45,13 @@ namespace testingprovider.ViewModels
         private async Task<List<House>> InitializeDataAsync()
         {
             var houseService = new HouseServices();
-            CustomerHouseList = await houseService.GetHouseListForCustomer(currentCustomer);
-            return CustomerHouseList;
+            ProviderHouseList = await houseService.GetHousesForProvider(providerId);
+            CurrentHouseService = await houseService.GetServiceForHouse(houseIDToFindSingleHouse);
+            return ProviderHouseList;
         }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-      
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

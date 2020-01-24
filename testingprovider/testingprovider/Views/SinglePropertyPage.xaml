@@ -44,7 +44,21 @@
                 FontAttributes="Bold"
                 TextColor="#8e7768"
             />
-
+            
+            
+            <Label 
+                Text="{Binding CurrentHouse.Lat, StringFormat='Service Type: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="#8e7768"
+            />
+            <Label 
+                Text="{Binding CurrentHouse.Long, StringFormat='Service Type: {0:F}'}"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="#8e7768"
+            />
+            
             <Button Text= "Add Note"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions= "CenterAndExpand"

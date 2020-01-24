@@ -23,14 +23,14 @@ namespace testingprovider.Views
     {
         Position mapPosition;
         Location userLocation;
-        public List<Pin> pinList = new List<Pin>(); 
+        public List<Pin> pinList = new List<Pin>();
         private string providerId = App._currentProviderID;
-        public List<House> HouseListForMap = new List<House>();
+        public List<House> _provoiderHouseList;
         Map map; 
         public MapListPage()
         {
-            InitializeDataAsync();
             InitializeComponent();
+            InitializeDataAsync();
             OnAppearing();
             mapPosition = new Position(userLocation.Latitude, userLocation.Longitude);
             MapSpan mapSpan = new MapSpan(mapPosition, 0.1, 0.1);
@@ -40,6 +40,15 @@ namespace testingprovider.Views
             PopulatePins(); 
             Content = map;
          
+        }
+        public List<House> ProviderHouseList
+        {
+            get { return _provoiderHouseList; }
+            set
+            {
+                _provoiderHouseList = value;
+                OnPropertyChanged();
+            }
         }
 
         protected void PopulatePins()
@@ -55,7 +64,7 @@ namespace testingprovider.Views
             map.Pins.Add(pin2);
             try
             {
-                foreach (House item in HouseListForMap)
+                foreach (House item in ProviderHouseList)
                 {
 
                     Pin newPin = new Pin
@@ -92,9 +101,9 @@ namespace testingprovider.Views
 
         private async Task<List<House>> InitializeDataAsync()
         {
-            var currentHouseService = new HouseServices();
-            HouseListForMap = await currentHouseService.GetHousesForProvider(providerId);
-            return HouseListForMap;
+            var houseService = new HouseServices();
+            ProviderHouseList = await houseService.GetHousesForProvider(providerId);
+            return ProviderHouseList;
         }
 
         protected override async void OnAppearing()

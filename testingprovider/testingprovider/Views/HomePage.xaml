@@ -3,13 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:testingprovider.ViewModels"
              mc:Ignorable="d"
              x:Class="testingprovider.Views.HomePage">
+    <ContentPage.BindingContext>
+        <viewModels:HouseViewModel/>
+    </ContentPage.BindingContext>
+
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="This will be the home page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20" BackgroundColor="White" >
+            <Label> Text = "Back to old home page"</Label>
         </StackLayout>
     </ContentPage.Content>
+
+
 </ContentPage>
