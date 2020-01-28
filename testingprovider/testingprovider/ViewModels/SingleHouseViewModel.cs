@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using System.ComponentModel;
 
@@ -23,7 +24,7 @@ namespace testingprovider.ViewModels
         private string houseIDToFindSingleHouse { get; set; }
 
         private Service _currentHouseService;
-
+        private Route _currentHouseRoute; 
         private House _currentHouse;
 
         private List<Note> _currentHouseNotes;
@@ -86,7 +87,15 @@ namespace testingprovider.ViewModels
             }
         }
 
-
+        public Route CurrentHouseRoute
+        {
+            get { return _currentHouseRoute; }
+            set
+            {
+                _currentHouseRoute = value;
+                OnPropertyChanged();
+            }
+        }
 
         //constructor for the viewmodel, can my be async so must call initialize data function below. 
 
@@ -96,8 +105,6 @@ namespace testingprovider.ViewModels
 
             houseIDToFindSingleHouse = App._currentHouseID;
             InitializeDataAsync();
-
-
 
         }
 
@@ -109,6 +116,7 @@ namespace testingprovider.ViewModels
             CurrentHouse = await viewCurrentHouseService.GetSingleHouseDetailPage(houseIDToFindSingleHouse);
             CurrentHouseService = await viewCurrentHouseService.GetServiceForHouse(houseIDToFindSingleHouse);
             CurrentHouseNotes = await viewCurrentHouseService.GetNotesForHouse(houseIDToFindSingleHouse);
+            CurrentHouseRoute = await viewCurrentHouseService.GetRoute(Convert.ToInt32(CurrentHouse.Id_R)); 
             CurrentHouseNotes.Reverse();
             return CurrentHouse;
 

@@ -46,115 +46,52 @@ namespace apitestingprovider.Controllers
         // GET: api/Route/5
 
         [ResponseType(typeof(Route))]
-
         public IHttpActionResult GetRoute(int id)
-
         {
-
             Route route = db.Routes.Find(id);
-
             if (route == null)
-
             {
-
                 return NotFound();
-
             }
-
-
-
             return Ok(route);
-
         }
-
-
 
         public List<Route> GetRoutesForProvider(string providerID)
-
         {
-
-            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
-
+        using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
             {
-
                 return (entities.Routes.Where(e => e.Id_P == providerID).ToList());
-
-
-
             }
-
         }
-
-
-
-
-
         // PUT: api/Route/5
-
         [ResponseType(typeof(void))]
-
         public IHttpActionResult PutRoute(int id, Route route)
-
         {
-
             if (!ModelState.IsValid)
-
             {
-
                 return BadRequest(ModelState);
-
             }
-
-
-
             if (id != route.Id_R)
-
             {
-
                 return BadRequest();
-
             }
-
-
-
             db.Entry(route).State = EntityState.Modified;
-
-
-
             try
-
             {
-
                 db.SaveChanges();
-
             }
-
             catch (DbUpdateConcurrencyException)
-
             {
-
                 if (!RouteExists(id))
-
                 {
-
                     return NotFound();
-
                 }
-
                 else
-
                 {
-
                     throw;
-
                 }
-
             }
-
-
-
             return StatusCode(HttpStatusCode.NoContent);
-
         }
 
 

@@ -101,6 +101,18 @@
                 TextColor="#8e7768"
 
             />
+            
+            <Label 
+
+                Text="{Binding CurrentHouseRoute.DayOfWeek, StringFormat='Service Day: {0:F}'}"
+
+                FontSize="Large"
+
+                FontAttributes="Bold"
+
+                TextColor="#8e7768"
+
+            />
 
 
 

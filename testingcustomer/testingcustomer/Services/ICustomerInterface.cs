@@ -25,6 +25,9 @@ namespace testingcustomer.Services
         [Get("/Notes?houseID={houseId}")]
         Task<List<Note>> GetNotesForHouse(string houseId);
 
+        [Get("/Route/{id}")]
+        Task<Route> GetRoute(int id);
+
         [Get("/Notes")]
         Task<List<Note>> GetAllNotes();
 

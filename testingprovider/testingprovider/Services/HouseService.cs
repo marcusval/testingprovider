@@ -84,6 +84,7 @@ namespace testingprovider.Services
         }
 
 
+        
 
         public async Task<Service> GetServiceForHouse(string passedHouse)
 
@@ -102,7 +103,10 @@ namespace testingprovider.Services
             return await _customerAPI.GetNotesForHouse(houseId);
 
         }
-
+        public async Task<Route> GetRoute(int id)
+        {
+            return await _customerAPI.GetRoute(id);
+        }
     }
 
 }
