@@ -7,16 +7,75 @@
              mc:Ignorable="d"
              x:Class="testingprovider.Views.HomePage">
     <ContentPage.BindingContext>
-        <viewModels:HouseViewModel/>
+        <viewModels:HomePageViewModel/>
     </ContentPage.BindingContext>
-
-
-
+    
     <ContentPage.Content>
-        <StackLayout Margin="20" BackgroundColor="White" >
-            <Label> Text = "Back to old home page"</Label>
+        <StackLayout BackgroundColor="WhiteSmoke" Padding="8">
+
+            <Image Source="icon.png" HeightRequest="160" VerticalOptions="StartAndExpand"  />
+
+            <Button Text= "Check In"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    ClassId="{Binding CurrentProvider.FirstName}"
+                    Clicked= "SendText"
+                    CornerRadius="11"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+                    Margin="5, 15, 5, 2"
+            />
+            <Button Text= "Check Out"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    ClassId="{Binding CurrentProvider.FirstName}"
+                    Clicked= "SendOutText"
+                    CornerRadius="11"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+                    Margin="5, 5, 5, 1"
+            />
+
+            <Frame BackgroundColor="White" Margin="10,10" HasShadow="True" CornerRadius="10">
+                <StackLayout Padding="5,15">
+                    <Label Text="{Binding CurrentProvider.FirstName, StringFormat='Hello {0:F}'}" 
+                       FontSize="Title"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       TextColor="#697775"
+                    />
+                    <Label Text="
+                           {Binding CurrentProvider.EmailAddress}" 
+                           FontSize="Large" 
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="#697775"
+                    />
+                    <Label Text="
+                           {Binding CurrentProvider.PhoneNum}" 
+                           FontSize="Large" 
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="#697775"
+                     />
+                    <Label Text="
+                           {Binding CurrentProvider.CityTerritory}" 
+                           FontSize="Large" 
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="#697775"
+                     />
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
     </ContentPage.Content>
-
-
 </ContentPage>

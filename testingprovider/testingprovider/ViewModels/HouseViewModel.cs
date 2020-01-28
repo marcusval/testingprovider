@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using testingprovider.Models;
 using testingprovider.Services;
 
-
 namespace testingprovider.ViewModels
 {
     public class HouseViewModel : INotifyPropertyChanged
@@ -14,7 +13,7 @@ namespace testingprovider.ViewModels
         public string houseIDToFindSingleHouse { get; set; }
         private Service _currentHouseService;
         public List<House> _provoiderHouseList;
-        
+        public Provider CurrentProvider { get; set; }
 
         public List<House> ProviderHouseList
         {

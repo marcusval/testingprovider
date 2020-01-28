@@ -177,6 +177,7 @@
     <Compile Include="Controllers\HouseController.cs" />
     <Compile Include="Controllers\NextServicesController.cs" />
     <Compile Include="Controllers\NotesController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\RouteController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
