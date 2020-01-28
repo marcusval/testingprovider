@@ -19,7 +19,7 @@ namespace testingcustomer.Services
         [Get("/Customers/{ID}")]
         Task<Customer> GetCustomerById(string ID);
 
-        [Get("/service?passedHouse={passedHouse}")]
+        [Get("/Service?passedHouse={passedHouse}")]
         Task<Service> GetServiceForHouse(string passedHouse);
 
         [Get("/Notes?houseID={houseId}")]

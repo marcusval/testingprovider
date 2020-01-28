@@ -1,92 +1,183 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
              xmlns:ViewModels="clr-namespace:testingprovider.ViewModels"
+
              mc:Ignorable="d"
+
              x:Class="testingprovider.Views.SinglePropertyPage">
+
     <ContentPage.BindingContext>
+
         <ViewModels:SingleHouseViewModel/>
+
     </ContentPage.BindingContext>
 
 
+
+
+
     <ContentPage.Content>
+
         <StackLayout Margin="20,20,20,15" BackgroundColor="#ffffff" >
+
             <Label 
+
                 Text="Property Details"
+
                 HorizontalTextAlignment="Center"
+
                 FontSize="29"
+
                 FontAttributes="Bold"
+
                 TextDecorations="Underline"
+
                 TextColor="#697775"
+
             />
+
+
 
             <StackLayout Orientation="Horizontal" Padding="5, 10, 5, 0">
+
                 <Label Text="{Binding CurrentHouse.StreetNumber}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="23" FontAttributes="Bold"/>
+
                 <Label Text="{Binding CurrentHouse.StreetName}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="23" FontAttributes="Bold"/>
+
                 <Label Text="{Binding CurrentHouse.StreetSuffix}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="23" FontAttributes="Bold"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 20">
-                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+
             </StackLayout>
 
+            <StackLayout Orientation="Horizontal" Padding="5, 2, 5, 20">
+
+                <Label Text="{Binding CurrentHouse.City}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+
+                <Label Text="{Binding CurrentHouse.State, StringFormat=', {0:F}'}" HorizontalTextAlignment="Center" TextColor="#697775" FontSize="Large" FontAttributes="Bold"/>
+
+            </StackLayout>
+
+
+
             <Label 
+
                 Text="{Binding CurrentHouseService.Frequency, StringFormat='Service Frequency: {0:F}'}"
+
                 FontSize="Large"
+
                 FontAttributes="Bold"
+
                 TextColor="#8e7768"
+
             />
+
             <Label 
+
                 Text="{Binding CurrentHouseService.ServiceType, StringFormat='Service Type: {0:F}'}"
+
                 FontSize="Large"
+
                 FontAttributes="Bold"
+
                 TextColor="#8e7768"
+
             />
+
             <Label 
+
                 Text="{Binding CurrentHouseService.WeekColor, StringFormat='Week Color: {0:F}'}"
+
                 FontSize="Large"
+
                 FontAttributes="Bold"
+
                 TextColor="#8e7768"
+
             />
-            
+
+
+
             <Button Text= "Navigate To"
+
                     HorizontalOptions="FillAndExpand"
+
                     VerticalOptions= "CenterAndExpand"
+
                     Clicked= "GoToDirectionsPage"
+
                     CornerRadius="11"
+
                     TextColor="White"
+
                     FontSize="Medium"
+
                     FontAttributes="Bold"
+
                     BackgroundColor="#697775"
+
                     Margin="5, 15, 5, 2"
+
             />
-            
+
+
+
             <Button Text= "Add Note"
+
                     HorizontalOptions="FillAndExpand"
+
                     VerticalOptions= "CenterAndExpand"
+
                     Clicked= "AddNotePage"
+
                     CornerRadius="11"
+
                     TextColor="White"
+
                     FontSize="Medium"
+
                     FontAttributes="Bold"
+
                     BackgroundColor="#697775"
+
                     Margin="5, 5, 5, 2"
+
             />
+
             <Button Text= "View Notes"
+
                     HorizontalOptions="FillAndExpand"
+
                     VerticalOptions= "CenterAndExpand"
+
                     Clicked= "GoToNotePage"
+
                     CornerRadius="11"
+
                     TextColor="White"
+
                     FontSize="Medium"
+
                     FontAttributes="Bold"
+
                     BackgroundColor="#697775"
+
                     Margin="5, 5, 5, 2"
+
             />
+
         </StackLayout>
+
     </ContentPage.Content>
+
+
+
 
 
 </ContentPage>

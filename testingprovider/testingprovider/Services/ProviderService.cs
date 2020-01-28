@@ -19,12 +19,12 @@ namespace testingprovider.Services
 
         }
 
-
+        
         public async Task<Service> GetServiceForHouse(string passedHouse)
         {
             return await _customerAPI.GetServiceForHouse(passedHouse);
         }
-
+        
         public async Task<List<House>> GetHousesForProvider(string providerID)
         {
             return await _customerAPI.GetHousesForProvider(providerID);
