@@ -9,6 +9,9 @@ namespace testingprovider.Services
         [Get("/House?providerID={providerID}")]
         Task<List<House>> GetHousesForProvider(string providerID);
 
+        [Get("/House?provider={provider}")]
+        Task<List<House>> GetHousesForMap(string provider);
+
         [Get("/nextservices")]
         Task<List<NextService>> GetListOfNextServices();
 

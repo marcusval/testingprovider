@@ -13,7 +13,6 @@ namespace testingprovider.ViewModels
         private string providerId = App._currentProviderID;
         public string houseIDToFindSingleHouse { get; set; }
         private Service _currentHouseService;
-        private List<House> _customerHouseList;
         public List<House> _provoiderHouseList;
         
 

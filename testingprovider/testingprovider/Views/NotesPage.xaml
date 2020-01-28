@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModels="clr-namespace:testingprovider.ViewModels"
+             mc:Ignorable="d"
+             x:Class="testingprovider.Views.NotesPage">
+
+    <ContentPage.BindingContext>
+        <ViewModels:SingleHouseViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+
+            <ListView ItemsSource="{Binding CurrentHouseNotes}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="0, 6" Padding="2,2,2,10">
+                                <Label
+                                    Text="{Binding Ndate, StringFormat='Date Written: {0:d}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#8e7768" FontSize="20" FontAttributes="Bold"
+                                />
+                                <Label
+                                    Text="{Binding FromProvider, StringFormat='From Provider: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="#697775" FontSize="20" FontAttributes="Bold"
+                                />
+
+                                <Label
+                                    Text="{Binding WrittenNote, StringFormat='Message: {0:f}'}"
+                                    HorizontalTextAlignment="Start" 
+                                    TextColor="Black" FontSize="20" FontAttributes="Bold"
+                                 />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

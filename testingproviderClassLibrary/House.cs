@@ -15,14 +15,14 @@ namespace testingproviderClassLibrary
     public partial class House
     {
         public string Id_H { get; set; }
+        public string Id_S { get; set; }
         public string StreetNumber { get; set; }
         public string StreetName { get; set; }
         public string StreetSuffix { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public string Id_S { get; set; }
-        public string Space { get; set; }
         public string Id_R { get; set; }
+        public string Space { get; set; }
         public string Id_C { get; set; }
         public string Long { get; set; }
         public string Lat { get; set; }

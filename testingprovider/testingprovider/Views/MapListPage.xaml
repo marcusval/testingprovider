@@ -4,11 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:viewModels="clr-namespace:testingprovider.ViewModels"
              x:Class="testingprovider.Views.MapListPage">
     <ContentPage.BindingContext>
         <viewModels:MapListPageViewModel/>
     </ContentPage.BindingContext>
-   
+
+    <ContentPage.Content>
+        <ContentView Content="{Binding map}"/>
+    </ContentPage.Content>
 </ContentPage>
+

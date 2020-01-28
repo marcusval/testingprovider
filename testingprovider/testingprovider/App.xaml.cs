@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using testingprovider.Models;
+using Xamarin.Forms;
 
 namespace testingprovider
 {
@@ -28,5 +30,8 @@ namespace testingprovider
         public static string _currentHouseID { get; set; }
         public static string _currentCustomerID = "132";
         public static string _currentProviderID = "3535";
+        public static double _currentLat { get; set; }
+        public static double _currentLong { get; set; }
+
     }
 }

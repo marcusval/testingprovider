@@ -45,6 +45,29 @@ namespace apitestingprovider.Controllers
         }
 
 
+        public List<House> GetHousesForMap(string provider)
+        {
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
+            {
+                List<Route> routeList = entities.Routes.Where(e => e.Id_P == provider).ToList();
+                List<House> houseList = entities.Houses.ToList();
+                List<House> HouseLists = new List<House>();
+
+                foreach (Route routevalue in routeList)
+                {
+                    foreach (House housevalue in houseList)
+                    {
+                        if ((routevalue.Id_R.ToString()) == (housevalue.Id_R))
+                        {
+                            HouseLists.Add(housevalue);
+                        }
+                    }
+                }
+                return HouseLists;
+            }
+        }
+
+
         //use this method to show a list of all the houses belonging to a customer, use for customer application
         public IEnumerable<House> GetHouseListForCustomer(string customerID)
         {

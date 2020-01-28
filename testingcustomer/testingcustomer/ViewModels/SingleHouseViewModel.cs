@@ -1,16 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using testingcustomer.Annotations;
 using testingcustomer.Models;
 using testingcustomer.Services;
+using Xamarin.Essentials;
 
 namespace testingcustomer.ViewModels
 {
     public class SingleHouseViewModel : INotifyPropertyChanged
     {
         private string houseIDToFindSingleHouse { get; set; }
+        private double lats { get; set; }
+        private double longs{ get; set; }
         private Service _currentHouseService;
         private House _currentHouse;
         private List<Note> _currentHouseNotes;
@@ -55,6 +60,7 @@ namespace testingcustomer.ViewModels
             InitializeDataAsync();
 
         }
+
 
         private async Task<House> InitializeDataAsync()
         {
