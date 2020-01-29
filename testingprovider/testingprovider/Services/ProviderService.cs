@@ -30,6 +30,17 @@ namespace testingprovider.Services
             return await _customerAPI.GetHousesForProvider(providerID);
         }
 
+        public async Task<Provider> GetProviderByEmail(string email)
+        {
+            return await _customerAPI.GetProviderByEmail(email); 
+        }
+
+        public async Task<List<Provider>> GetAllProviders()
+        {
+            return await _customerAPI.GetAllProviders();
+        }
+
+
 
     }
 

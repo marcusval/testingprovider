@@ -15,6 +15,20 @@ namespace testingprovider.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+        private string currentProvider = App._currentProviderID; 
+        
+        public List<Provider> providerList = new List<Provider>(); 
+
+        private Provider _currentProvider;
+        public Provider CurrentProvider
+        {
+            get { return _currentProvider; }
+            set
+            {
+                _currentProvider = value;
+                OnPropertyChanged();
+            }
+        }
         public Action DisplayInvalidLoginPrompt;
         public bool loginvalid; 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
@@ -41,8 +55,24 @@ namespace testingprovider.ViewModels
         public ICommand SubmitCommand { protected set; get; }
         public LoginPageViewModel()
         {
+            InitializeDataAsync(); 
             SubmitCommand = new Command(OnSubmit);
         }
+
+
+
+        private async Task<List<Provider>> InitializeDataAsync()
+        {
+            var ProviderService = new ProviderService();
+            providerList = await ProviderService.GetAllProviders();
+            return providerList;
+        }
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public void OnSubmit()
         {
             if (email != "hello" || password != "hello")

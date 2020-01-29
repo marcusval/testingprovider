@@ -14,6 +14,19 @@ namespace testingcustomer.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+        private string currentCustomer = App._currentCustomerID;
+        private Customer _currentCustomer;
+        public Customer CurrentCustomer
+        {
+            get { return _currentCustomer; }
+            set
+            {
+                _currentCustomer = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<Customer> customerList = new List<Customer>();
         public Action DisplayInvalidLoginPrompt;
         public bool loginvalid;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
@@ -40,8 +53,18 @@ namespace testingcustomer.ViewModels
         public ICommand SubmitCommand { protected set; get; }
         public LoginPageViewModel()
         {
+            InitializeDataAsync(); 
             SubmitCommand = new Command(OnSubmit);
         }
+
+        private async Task<List<Customer>> InitializeDataAsync()
+        {
+            var CustomerService = new CustomerInfoService();
+            customerList = await CustomerService.GetAllCustomers();
+            return customerList;
+        }
+
+
         public void OnSubmit()
         {
             if (email != "hello" || password != "hello")
@@ -50,7 +73,11 @@ namespace testingcustomer.ViewModels
                 loginvalid = false;
             }
             else { loginvalid = true; }
+        }
 
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

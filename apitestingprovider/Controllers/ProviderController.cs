@@ -22,5 +22,13 @@ namespace apitestingprovider.Controllers
                 return entities.Providers.FirstOrDefault(e => e.EmailAddress     == email);
             }
         }
+
+        public IEnumerable<Provider> GetAllProviders()
+        {
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
+            {
+                return entities.Providers.ToList();
+            }
+        }
     }
 }

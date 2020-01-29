@@ -28,6 +28,9 @@ namespace testingcustomer.Services
         [Get("/Route/{id}")]
         Task<Route> GetRoute(int id);
 
+        [Get("/Customers")]
+        Task<List<Customer>> GetAllCustomers(); 
+
         [Get("/Notes")]
         Task<List<Note>> GetAllNotes();
 

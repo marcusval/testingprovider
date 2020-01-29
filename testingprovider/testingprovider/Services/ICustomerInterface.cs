@@ -12,6 +12,9 @@ namespace testingprovider.Services
 
     public interface ICustomerInterface
     {
+        [Get("/Provider")]
+        Task<List<Provider>> GetAllProviders(); 
+
         [Get("/Provider/{ID}")]
         Task<Provider> GetProviderById(string ID);
 
@@ -35,6 +38,11 @@ namespace testingprovider.Services
 
         [Get("/Service?passedHouse={passedHouse}")]
         Task<Service> GetServiceForHouse(string passedHouse);
+
+
+        [Get("/Provider?email={email}")]
+        Task<Provider> GetProviderByEmail(string email);
+
 
         [Get("/Notes?houseID={houseId}")]
         Task<List<Note>> GetNotesForHouse(string houseId);
