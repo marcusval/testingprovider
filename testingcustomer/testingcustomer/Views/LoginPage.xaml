@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:testingcustomer.ViewModels"
+             mc:Ignorable="d"
+             x:Class="testingcustomer.Views.LoginPage">
+    
+    <ContentPage.BindingContext>
+        <viewModels:LoginPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="0,10,0,120">
+            <Image Source="icon.png" HeightRequest="160" VerticalOptions="StartAndExpand"  />
+
+            <Label Text=  "Email Address" 
+                           FontSize="Large" 
+                           Padding="5,5"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="#697775"
+                    />
+            <Entry
+                Placeholder="Enter Email Address"
+                PlaceholderColor="#8e7768" FontSize="Large" 
+                TextColor="#8e7768" 
+                x:Name="emailentry"
+                Text = "{Binding Email}"
+                HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+                />
+
+            <Label Text=  "Password" 
+                           Padding="5,5"
+                           FontSize="Large" 
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           TextColor="#697775"
+                    />
+
+            <Entry
+                Placeholder="Enter Password"
+                PlaceholderColor="#8e7768" FontSize="Large" 
+                TextColor="#8e7768" 
+                IsPassword="True"
+                Text = "{Binding Password}"
+                x:Name="passwordentry"
+                HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+                />
+
+            <Button Text= "Log In"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions= "CenterAndExpand"
+                    ClassId=""
+                    
+                    Command="{Binding SubmitCommand}"
+                    IsVisible="False"
+                    CornerRadius="11"
+                    TextColor="White"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="#697775"
+                    Margin="5, 15, 5, 2"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

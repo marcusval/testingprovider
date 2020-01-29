@@ -24,5 +24,13 @@ namespace apitestingprovider.Controllers
             }
         }
 
+        public Customer GetCustomerByEmail(string emailaddress)
+        {
+            using (CoyApp_dbEntities entities = new CoyApp_dbEntities())
+            {
+                return entities.Customers.FirstOrDefault(e => e.EmailAddress == emailaddress);
+            }
+        }
+
     }
 }

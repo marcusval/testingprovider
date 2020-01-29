@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using testingprovider.Models;
+using testingprovider.Views;
 using Xamarin.Forms;
 
 namespace testingprovider
@@ -9,7 +10,7 @@ namespace testingprovider
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
