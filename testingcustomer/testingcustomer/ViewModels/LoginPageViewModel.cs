@@ -67,12 +67,36 @@ namespace testingcustomer.ViewModels
 
         public void OnSubmit()
         {
-            if (email != "hello" || password != "hello")
+            loginvalid = false;
+            foreach (var item in customerList)
             {
-                DisplayInvalidLoginPrompt();
-                loginvalid = false;
+                if ((email != null) && (email.Length != 0))
+                {
+                    if ((password != null) && (password.Length != 0))
+                    {
+                        if (email == item.EmailAddress)
+                        {
+                            if (password == item.Password)
+                            {
+                                loginvalid = true;
+                                App._currentCustomerID = item.Id_C;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
-            else { loginvalid = true; }
+            if (loginvalid != true)
+            {
+                DisplayError();
+            }
+        }
+
+        private void DisplayError()
+        {
+            DisplayInvalidLoginPrompt();
+            loginvalid = false;
+            return;
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

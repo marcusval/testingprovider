@@ -30,7 +30,7 @@ namespace testingprovider.ViewModels
             }
         }
         public Action DisplayInvalidLoginPrompt;
-        public bool loginvalid; 
+        public bool loginvalid = false; 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string email;
         public string Email
@@ -75,13 +75,32 @@ namespace testingprovider.ViewModels
 
         public void OnSubmit()
         {
-            if (email != "hello" || password != "hello")
+            foreach (var item in providerList) 
             {
-                DisplayInvalidLoginPrompt();
-                loginvalid = false; 
+                if ((email != null) && (email.Length != 0))
+                {
+                    if ((password != null) && (password.Length != 0))
+                    {
+                        if (email == item.EmailAddress) 
+                        {
+                            if (password == item.Password) {
+                                loginvalid = true;
+                                App._currentProviderID = item.Id_P; 
+                                break; 
+                            }
+                        }
+                    }
+                }
             }
-            else { loginvalid = true; }
+            if (loginvalid != true) {
+                DisplayError(); 
+            }
+        }
 
+        private void DisplayError() {
+            DisplayInvalidLoginPrompt();
+            loginvalid = false; 
+            return; 
         }
     }
 }

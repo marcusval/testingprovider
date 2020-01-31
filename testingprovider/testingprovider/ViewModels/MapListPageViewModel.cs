@@ -38,7 +38,9 @@ namespace testingprovider.ViewModels
         {
             var houseService = new HouseServices();
             ProviderHouseList = await houseService.GetHousesForProvider(providerId);
+            OnPropertyChanged(); 
             return ProviderHouseList;
+
         }
        
         public void GetData()
@@ -106,47 +108,48 @@ namespace testingprovider.ViewModels
 
             
             {
-                Position position = new Position(33.567110, -117.186590);
-                Pin pin = new Pin
-                {
-                    Label = "Via Las Lomas",
-                    Address = "25084 Via Las Lomas, Murrieta",
-                    Type = PinType.Place,
-                    Position = position
-                };
-                map.Pins.Add(pin);
+                if (App._currentProviderID == "3535") { 
+                    Position position = new Position(33.567110, -117.186590);
+                    Pin pin = new Pin
+                    {
+                        Label = "Via Las Lomas",
+                        Address = "25084 Via Las Lomas, Murrieta",
+                        Type = PinType.Place,
+                        Position = position
+                    };
+                    map.Pins.Add(pin);
 
-                Position position1 = new Position(33.660640, -117.159090);
-                Pin pin1 = new Pin
-                {
-                    Label = "Millcreek",
-                    Address = "31667 Millcreek, Menifee",
-                    Type = PinType.Place,
-                    Position = position1
-                };
-                map.Pins.Add(pin1);
+                    Position position1 = new Position(33.660640, -117.159090);
+                    Pin pin1 = new Pin
+                    {
+                        Label = "Millcreek",
+                        Address = "31667 Millcreek, Menifee",
+                        Type = PinType.Place,
+                        Position = position1
+                    };
+                    map.Pins.Add(pin1);
 
-                Position position2 = new Position(33.668050, -117.181170);
-                Pin pin2 = new Pin
-                {
-                    Label = "Freedom",
-                    Address = "27439 Freedom, Menifee",
-                    Type = PinType.Place,
-                    Position = position2
-                };
-                map.Pins.Add(pin2);
+                    Position position2 = new Position(33.668050, -117.181170);
+                    Pin pin2 = new Pin
+                    {
+                        Label = "Freedom",
+                        Address = "27439 Freedom, Menifee",
+                        Type = PinType.Place,
+                        Position = position2
+                    };
+                    map.Pins.Add(pin2);
 
-                Position position3 = new Position(33.688780, -117.210780);
-                Pin pin3 = new Pin
-                {
-                    Label = "Kure",
-                    Address = "25727 Kure, Menifee",
-                    Type = PinType.Place,
-                    Position = position3
-                };
-                map.Pins.Add(pin3);
+                    Position position3 = new Position(33.688780, -117.210780);
+                    Pin pin3 = new Pin
+                    {
+                        Label = "Kure",
+                        Address = "25727 Kure, Menifee",
+                        Type = PinType.Place,
+                        Position = position3
+                    };
+                    map.Pins.Add(pin3);
+                }
             }
-
 
             if (App._currentProviderID == "4545")
             {

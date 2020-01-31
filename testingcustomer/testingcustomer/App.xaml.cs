@@ -61,7 +61,7 @@ namespace testingcustomer
 
         public static string _currentHouseID { get; set; }
 
-        public static string _currentCustomerID = "132";
+        public static string _currentCustomerID;
 
     }
 
