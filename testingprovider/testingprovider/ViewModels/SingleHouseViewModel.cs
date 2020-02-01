@@ -34,49 +34,27 @@ namespace testingprovider.ViewModels
         //used to display a house object
 
         public House CurrentHouse
-
         {
-
             get { return _currentHouse; }
-
             set
-
             {
-
                 _currentHouse = value;
-
                 OnPropertyChanged();
-
             }
-
         }
-
-
 
         //function to display the notes for a house
-
         public List<Note> CurrentHouseNotes
-
         {
-
             get { return _currentHouseNotes; }
-
             set
-
             {
-
                 _currentHouseNotes = value;
-                
                 OnPropertyChanged();
-
             }
-
         }
 
-
-
         //displays the type of landscape service the property gets, do not confuse with program service folder
-
         public Service CurrentHouseService
         {
             get { return _currentHouseService; }
@@ -98,17 +76,11 @@ namespace testingprovider.ViewModels
         }
 
         //constructor for the viewmodel, can my be async so must call initialize data function below. 
-
         public SingleHouseViewModel()
-
         {
-
             houseIDToFindSingleHouse = App._currentHouseID;
             InitializeDataAsync();
-
         }
-
-
 
         private async Task<House> InitializeDataAsync()
         {
@@ -122,26 +94,13 @@ namespace testingprovider.ViewModels
 
         }
 
-
-
-
-
         //automated function to handle automatic reloading when properties on the page change
-
         public event PropertyChangedEventHandler PropertyChanged;
 
-
-
         //automated function to handle automatic reloading when properties on the page change
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-
         {
-
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
         }
-
     }
-
 }

@@ -19,7 +19,8 @@ namespace testingprovider.Views
         async void Button_OnClicked(object sender, EventArgs e)
         {
             await DisplayAlert("Success", "Keep Up The Hard Work!", "Ok");
-            await Navigation.PopToRootAsync();
+            this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
+            await Navigation.PopAsync();
         }
     }
 }

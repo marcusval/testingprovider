@@ -53,7 +53,7 @@ namespace testingcustomer.ViewModels
         public ICommand SubmitCommand { protected set; get; }
         public LoginPageViewModel()
         {
-            InitializeDataAsync(); 
+            InitializeDataAsync();
             SubmitCommand = new Command(OnSubmit);
         }
 

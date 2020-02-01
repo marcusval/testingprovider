@@ -16,7 +16,8 @@ namespace testingcustomer.Views
         async void Button_OnClicked(object sender, EventArgs e)
         {
             await DisplayAlert("Success", "Keep the feedback coming, we work for you!", "Ok");
-            await Navigation.PopToRootAsync();
+            this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
+            await Navigation.PopAsync();
         }
     }
 }
