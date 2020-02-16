@@ -9,7 +9,6 @@
     <ContentPage.BindingContext>
         <viewModels:HomePageViewModel/>
     </ContentPage.BindingContext>
-    
     <ContentPage.Content>
         <StackLayout BackgroundColor="WhiteSmoke" Padding="8">
 
